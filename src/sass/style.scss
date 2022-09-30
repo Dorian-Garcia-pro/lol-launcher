@@ -1,0 +1,91 @@
+$textIcon : rgb(205, 190, 145); // #cdbe91
+$textIconHover : rgb(240, 230, 210); //#f0e6d2
+$textIconHoverShadow : rgba(240, 230, 210, 0.2);
+$primaryBlue : #010a13;
+$primaryBlueLighten: rgb(30, 35, 40);
+$lightGrey : rgba(128, 128, 128, 0.500);
+$lightGreyBGbuttons : #1e2328;
+$darkGreen : rgb(9, 166, 70);
+$lightGreen : rgb(101, 245, 158);
+$golden : darken($textIcon , 25% );
+$idleColor: rgb(32, 151, 32);
+$queueColor:rgb(114, 196, 221);
+$afkColor : grey;
+
+
+%flexCenterXY {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%greyed {
+filter: saturate(0);
+}
+
+
+%absoluteTranslate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+@mixin absolute-el ($top, $right, $bottom, $left, $x, $y ) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    transform: translate($x,$y);    
+} 
+
+
+
+
+
+$heightNav: 11vh;
+$heightSocialsFooter : 2.5rem;
+
+@import 'libs/reset.scss';
+@import 'mainNav.scss';
+@import 'socials.scss';
+
+
+body
+{
+    color: $textIcon;
+    background-color: $primaryBlue;
+    font-family: sans-serif;
+  /*   overflow: hidden; */
+}
+
+
+#bodyApp {
+    display: flex;
+    min-height: calc(100vh - $heightNav - 3px);
+   /*  background-color: red; */
+    justify-content: flex-end;
+
+}
+
+.greyed {
+    filter: saturate(0) brightness(40%);
+}
+
+.disabled {
+   cursor: default;
+}
+
+.hidden {
+ display: none;
+}

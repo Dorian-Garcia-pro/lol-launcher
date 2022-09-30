@@ -1,0 +1,213 @@
+#socialsContainer {
+@extend %noselect;
+width: 17vw;    
+position: relative;
+border: 1px solid $lightGrey;
+min-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px);
+max-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px);
+height: 100%;
+overflow-y: auto;
+&::-webkit-scrollbar {
+    width: 0.5rem;
+}
+&::-webkit-scrollbar-track {
+    background: transparent;
+  }
+&::-webkit-scrollbar-thumb {
+background-color: #353535;
+opacity: 0.5;
+border-radius: 1rem;   
+    &:hover {
+        background-color: #cdbe91;
+        opacity: 1;
+    }
+}
+}
+
+#headerSocials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px;
+    margin-bottom: 1rem;
+    & p {
+        font-size: 1rem;
+        font-weight:bold;
+        letter-spacing: 1px;
+        color: grey;
+    }
+}
+
+#headerSocialsIcons {
+    display: flex;
+    gap:1rem;
+    padding: 0 4px 0 0 ;
+    & img {
+        width: 1.5rem;
+        cursor: pointer;
+        &:hover {
+            filter: brightness(150%);
+        }
+    }
+  
+}
+
+#friendRequestsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 8px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: $golden;
+    cursor: pointer;
+    & p:last-child {
+        color: $primaryBlue;
+        background-color: $golden;
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+    &:hover {
+        background-color: rgba(228, 228, 228, 0.1);
+/*         color: lighten($golden, 20%); */
+        filter: brightness(150%);
+    }
+}
+
+.catSocialheader {
+    display: flex;
+    padding:  8px 4px;
+   /*  margin: 0  0 1rem 0; */
+    gap:0.5rem;
+    font-weight: bold;
+    filter:brightness(70%)saturate(50%);
+    cursor: pointer;
+    &:hover {
+        filter:brightness(150%)saturate(40%);
+        background-color: rgba(228, 228, 228, 0.1);        
+    }
+    & p {
+        letter-spacing: 1px;
+    }
+}
+
+.arrowCatSocial {
+    & img {
+        max-width: 0.8rem;
+        transform: rotate(90deg);
+        transition: all 0.1s ease-in;
+    }
+    &[data-opened=false] img {
+        transform: rotate(0deg);
+    }
+}
+
+#categoriesSocialWrapper {
+    overflow:hidden;
+}
+
+.listFriendsCard {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap : 0.2rem;
+   
+}
+.friendCard {
+    padding: 8px;
+    display: flex;
+    cursor: pointer;
+    background-color: transparent;
+    &:hover {
+        background-color: rgba(240, 230, 210, 0.1);
+        filter: brightness(120%);
+    }
+    
+}
+
+.friendCardOffline {
+    opacity: 0.5;
+   & .friendCardCol  {
+    filter:saturate(0)
+   }
+}
+
+.friendCardName {
+    color:darken($golden, $amount: 2);
+    filter:saturate(0.3);
+}
+.ppFriendCard {
+    margin-right: 8px;
+    display: flex;
+    & img{
+        aspect-ratio: 1;
+        width: 3rem;
+        border-radius: 50%;
+        outline: 2px solid $golden;
+    }    
+}
+
+.friendCardCol {
+    display: flex;
+    flex-direction: column;
+    justify-content:  flex-start;
+    gap: 0.4rem;
+}
+
+.friendCardStatus {
+   color: $idleColor;
+   &[data-statutType="queue"] {
+    color:$queueColor;
+   }
+   &[data-statutType="afk"] {
+    color: $afkColor;
+   }
+}
+
+#footerSocial {
+    position: sticky;
+    bottom: 0px;
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    justify-content: space-between;
+    min-height: $heightSocialsFooter;
+    & div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $golden;
+        width: 100%;
+        padding: 0.5rem 0;
+        background-color: $lightGreyBGbuttons;
+        cursor: pointer;
+        &:hover {
+            filter: brightness(120%);
+        }
+        &.disabledMic {
+            cursor: default;
+            filter: saturate(0) brightness(80%);
+            & > img { 
+                 filter: brightness(50%);
+                }
+        }
+        &.greyed {
+            cursor: default;
+            filter: saturate(0) brightness(40%);
+            &:hover{
+                filter: saturate(0) brightness(40%);
+            }
+        }
+    }
+    & img {
+        width: 1.2rem;
+        filter: brightness(90%);
+    }
+    & p {
+        padding: 0 1rem;
+        font-size : 0.8rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+}
