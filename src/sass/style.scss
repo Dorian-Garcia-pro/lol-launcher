@@ -10,7 +10,7 @@ $lightGreen : rgb(101, 245, 158);
 $golden : darken($textIcon , 25% );
 $idleColor: rgb(32, 151, 32);
 $queueColor:rgb(114, 196, 221);
-$afkColor : grey;
+$afkColor : rgb(59, 59, 59);
 
 
 %flexCenterXY {
@@ -59,6 +59,8 @@ $heightSocialsFooter : 2.5rem;
 @import 'libs/reset.scss';
 @import 'mainNav.scss';
 @import 'socials.scss';
+@import 'home.scss';
+@import 'subNavHome.scss';
 
 
 body

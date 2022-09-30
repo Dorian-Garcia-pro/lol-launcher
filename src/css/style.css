@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-#socialsContainer, #mainNavContainer * {
+#homeContainer, #socialsContainer, #mainNavContainer * {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -505,7 +505,8 @@ table {
   margin-bottom: 1rem;
 }
 #headerSocials p {
-  font-size: 1rem;
+  padding-left: 0.5rem;
+  font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 1px;
   color: grey;
@@ -631,7 +632,7 @@ table {
   color: rgb(114, 196, 221);
 }
 .friendCardStatus[data-statutType=afk] {
-  color: grey;
+  color: rgb(59, 59, 59);
 }
 
 #footerSocial {
@@ -679,6 +680,37 @@ table {
   font-size: 0.8rem;
   letter-spacing: 1px;
   font-weight: bold;
+}
+
+#homeContainer {
+  width: 100%;
+  position: relative;
+  /* border: 1px solid $lightGrey; */
+  /* min-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px);
+  max-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px); */
+  /* height: 100%; */
+  background-image: url("https://notagamer.net/wp-content/uploads/2022/01/T2_Prime-Gaming_JAN_1280x720_v1_optimized-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 95%;
+  -webkit-box-shadow: inset 0px 30px 50px 0px #000000;
+  box-shadow: inset 0px 30px 50px 0px #000000;
+}
+
+#subNavHomeContainer {
+  position: absolute;
+  width: 100%;
+  padding: 1rem 4rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+#subNavHomeContainer ol {
+  display: flex;
+  gap: 3rem;
+}
+#subNavHomeContainer ol li {
+  cursor: pointer;
 }
 
 body {

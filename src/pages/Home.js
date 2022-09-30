@@ -1,7 +1,13 @@
 import React from "react";
+import primeHome from "../assets/primeHome.jpg";
+import SubNavHome from "../components/SubNavHome";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <div id="homeContainer">
+      <SubNavHome />
+    </div>
+  );
 }
 
 export default Home;

@@ -1,0 +1,17 @@
+#homeContainer {
+@extend %noselect;
+width: 100%;    
+position: relative;
+/* border: 1px solid $lightGrey; */
+/* min-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px);
+max-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px); */
+/* height: 100%; */
+background-image: url("https://notagamer.net/wp-content/uploads/2022/01/T2_Prime-Gaming_JAN_1280x720_v1_optimized-1.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 0% 95%;
+
+-webkit-box-shadow: inset 0px 30px 50px 0px #000000; 
+box-shadow: inset 0px 30px 50px 0px #000000;
+
+}
