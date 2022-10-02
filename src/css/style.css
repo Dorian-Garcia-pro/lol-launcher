@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-#socialsContainer, #mainNavContainer * {
+#homeContainer, #socialsContainer, #mainNavContainer * {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -505,7 +505,8 @@ table {
   margin-bottom: 1rem;
 }
 #headerSocials p {
-  font-size: 1rem;
+  padding-left: 0.5rem;
+  font-size: 0.9rem;
   font-weight: bold;
   letter-spacing: 1px;
   color: grey;
@@ -607,14 +608,28 @@ table {
 }
 
 .ppFriendCard {
-  margin-right: 8px;
+  margin-right: 1rem;
   display: flex;
+  position: relative;
 }
 .ppFriendCard img {
   aspect-ratio: 1;
   width: 3rem;
   border-radius: 50%;
   outline: 2px solid #998446;
+  position: relative;
+}
+.ppFriendCard[data-statutType=afk]::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: -4px;
+  width: 9px;
+  height: 9px;
+  background-color: black;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 0px 2px grey, 0px 0px 0px 4px black;
+  box-shadow: 0px 0px 0px 2px grey, 0px 0px 0px 4px black;
 }
 
 .friendCardCol {
@@ -631,7 +646,7 @@ table {
   color: rgb(114, 196, 221);
 }
 .friendCardStatus[data-statutType=afk] {
-  color: grey;
+  color: rgb(59, 59, 59);
 }
 
 #footerSocial {
@@ -681,6 +696,123 @@ table {
   font-weight: bold;
 }
 
+#homeContainer {
+  width: 100%;
+  position: relative;
+  /* border: 1px solid $lightGrey; */
+  /* min-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px);
+  max-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px); */
+  /* height: 100%; */
+  background-image: url("https://notagamer.net/wp-content/uploads/2022/01/T2_Prime-Gaming_JAN_1280x720_v1_optimized-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 95%;
+  -webkit-box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;
+  box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;
+}
+
+#homePreviewRotationChamp {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+#homePreviewAmazonPrimeContainer {
+  position: absolute;
+  left: 4.2rem;
+  bottom: 10rem;
+}
+#homePreviewAmazonPrimeContainer p {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: rgb(240, 230, 210);
+  font-weight: bold;
+}
+#homePreviewAmazonPrimeContainer p:last-of-type {
+  color: rgb(205, 190, 145);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+#homePreviewAmazonPrimeContainer button {
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+#homePreviewContentRelated {
+  position: absolute;
+  right: 2rem;
+  bottom: 4rem;
+  display: flex;
+  gap: 1rem;
+}
+#homePreviewContentRelated div {
+  /*     max-height: 10rem; */
+  min-width: 10rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+#homePreviewContentRelated div img {
+  max-height: 10rem;
+  margin-bottom: 1rem;
+  outline: 2px solid rgb(16, 14, 20);
+}
+#homePreviewContentRelated div:hover img {
+  outline: 2px solid rgb(205, 190, 145);
+}
+#homePreviewContentRelated div:hover {
+  filter: brightness(1.1);
+}
+#homePreviewContentRelated div p {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#subNavHomeContainer {
+  position: absolute;
+  width: 100%;
+  padding: 1rem 4rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+#subNavHomeContainer ol {
+  display: flex;
+  gap: 3rem;
+}
+#subNavHomeContainer ol li {
+  cursor: pointer;
+}
+
+.subNavHome:hover {
+  color: rgb(240, 230, 210);
+}
+
+.subNavHome.active {
+  position: relative;
+}
+.subNavHome.active:hover {
+  color: rgb(240, 230, 210);
+}
+.subNavHome.active li {
+  color: rgb(240, 230, 210);
+}
+.subNavHome.active::after, .subNavHome.active::before {
+  content: "";
+  position: absolute;
+  bottom: -0.3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.subNavHome.active::after {
+  height: 1px;
+  margin: 1rem 0 0 0;
+  background: #c2b58b;
+  background: radial-gradient(circle, #ffedb4 30%, rgba(215, 186, 98, 0) 100%), radial-gradient(circle, #ffedb4 50%, rgba(215, 186, 98, 0) 100%), radial-gradient(circle, #fadf87 1%, rgba(215, 186, 98, 0) 20%);
+  /*       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aeb64b",endColorstr="#d7ba62",GradientType=1);  */
+  width: 120%;
+}
+
 body {
   color: rgb(205, 190, 145);
   background-color: #010a13;
@@ -705,6 +837,74 @@ body {
 
 .hidden {
   display: none;
+}
+
+.button {
+  text-decoration: none;
+  color: rgb(205, 190, 145);
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  padding: 0.8rem 1.2rem;
+  background-color: rgb(30, 35, 40);
+  cursor: pointer;
+  border-image-slice: 1;
+  border-width: 2px;
+  border-image-source: linear-gradient(to top, #7b5d29, #c8a96c);
+  /*        transition: all 0.1s ease-in; */
+}
+.button:hover {
+  color: rgb(240, 230, 210);
+  border-image-source: linear-gradient(to top, #c8a05b, #ebdfc9);
+  -webkit-box-shadow: inset 0px 0px 5px 1px rgba(203, 173, 115, 0.4509803922);
+  box-shadow: inset 0px -5px 20px 1px rgba(203, 173, 115, 0.4509803922);
+}
+
+#clashContainer, #tftContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid grey;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: grey transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

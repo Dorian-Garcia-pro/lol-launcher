@@ -190,7 +190,10 @@ const Socials = () => {
               )
               .map((friend) => (
                 <div className="friendCard">
-                  <div className="ppFriendCard">
+                  <div
+                    className="ppFriendCard"
+                    data-statutType={friend.statuType}
+                  >
                     <img
                       src={friend.iconAvatar ? friend.iconAvatar : ppNav}
                       alt="iconAvatrar"
@@ -250,7 +253,10 @@ const Socials = () => {
               )
               .map((friend) => (
                 <div className="friendCard">
-                  <div className="ppFriendCard">
+                  <div
+                    className="ppFriendCard"
+                    data-statutType={friend.statuType}
+                  >
                     <img
                       src={friend.iconAvatar ? friend.iconAvatar : ppNav}
                       alt="iconAvatrar"
