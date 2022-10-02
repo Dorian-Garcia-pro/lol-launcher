@@ -14,3 +14,34 @@
     }
 }
 }
+
+.subNavHome{
+    &:hover {
+        color: $textIconHover;
+        }
+}
+
+.subNavHome.active {
+    position: relative;
+    &:hover {
+    color: $textIconHover;
+    }
+
+    & li{ color: $textIconHover;}
+
+    &::after, &::before{
+    content: '';
+    position: absolute;
+    bottom: -0.3rem;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} 
+    &::after{
+        height: 1px;
+        margin: 1rem 0 0 0 ;
+        background: #c2b58b;
+       background: radial-gradient(circle, #ffedb4 30%, rgba(215, 186, 98, 0) 100%), radial-gradient(circle, #ffedb4 50%, rgba(215, 186, 98, 0) 100%), radial-gradient(circle, #fadf87 1%, rgba(215, 186, 98, 0) 20%) ;
+/*       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aeb64b",endColorstr="#d7ba62",GradientType=1);  */
+        width: 120%;
+    } 
+}
