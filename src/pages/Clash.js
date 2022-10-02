@@ -1,5 +1,5 @@
 import React from "react";
-import SubNavHome from "../components/SubNavHome";
+/* import SubNavHome from "../components/SubNavHome"; */
 
 function Clash() {
   return (
