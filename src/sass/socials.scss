@@ -136,6 +136,8 @@ border-radius: 1rem;
 
 .friendCardName {
     color:darken($golden, $amount: 2);
+    font-weight: bold;
+    letter-spacing: 0.05rem;
     filter:saturate(0.3);
 }
 

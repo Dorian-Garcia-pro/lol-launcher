@@ -604,6 +604,8 @@ table {
 
 .friendCardName {
   color: #927e42;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
   filter: saturate(0.3);
 }
 
