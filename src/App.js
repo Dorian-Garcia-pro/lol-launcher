@@ -26,6 +26,7 @@ function App() {
           <Route path="/inventory" element={<Clash />} />
           <Route path="/forge" element={<Clash />} />
           <Route path="/shop" element={<Clash />} />
+          <Route path="*" element={<Home to="/" />} />
         </Routes>
         <div id="socialsCol">
           <Socials />
