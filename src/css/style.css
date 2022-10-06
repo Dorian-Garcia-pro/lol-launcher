@@ -1048,6 +1048,9 @@ body {
   align-items: center;
   width: 100%;
 }
+#clashContainer img, #tftContainer img {
+  width: 12rem;
+}
 
 .lds-ring {
   display: inline-block;
