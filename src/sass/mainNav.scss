@@ -248,11 +248,12 @@
 }
 
 #ppNameStatusClose {
+   min-width: 15rem; 
     position: relative;
     display: flex;
     align-items: center;
     gap:1rem;
-    padding-right: 7rem;
+ /*  padding-right: 7rem;  */
     padding-left: 0.5rem;
 }
 
@@ -288,7 +289,7 @@
 }
 
 #navPPlevels { 
-    @include absolute-el(95%,none,none,50%,-50%,-50%);
+    @include absolute-el(100%,none,none,50%,-50%,-50%);
     @extend %flexCenterXY;
     height: fit-content;
     padding: 2px 4px;
@@ -296,12 +297,15 @@
     background-color: $primaryBlue;
     color: rgb(175, 175, 175);
     font-weight: bold;
+    font-size: 0.8rem;
 }
 
 #navNicknameStatus {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    height: 60%;
+    justify-content: flex-end;
 }
 
 #navNickame {
@@ -324,10 +328,20 @@
     border-radius: 50%;
     -webkit-box-shadow: inset 0px 0px 0px 2px $lightGreen; 
     box-shadow: inset 0px 0px 0px 2px $lightGreen;
+    cursor: pointer;
+    &.playerBusy {
+        background-color: black;
+        -webkit-box-shadow: inset 0px 0px 0px 2px darkred; 
+        box-shadow: inset 0px 0px 0px 2px darkred;
+    }
 }
+
 
 #navStatusText {
     cursor: pointer;
+    &.playerBusy {
+    color: grey;
+    }
 }
 
 #navPPcloseButtons {

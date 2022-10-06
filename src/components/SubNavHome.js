@@ -5,18 +5,18 @@ function SubNavHome() {
   return (
     <div id="subNavHomeContainer">
       <ol>
-        <NavLink className="subNavHome" to="currentEvent">
+        <NavLink className="subNavHome" to="/home/currentEvent">
           <li>
             <p>MONDIAL 2022</p>
           </li>
         </NavLink>
-        <NavLink className="subNavHome" to="preview">
+        <NavLink className="subNavHome" to="/home/preview">
           <li>APERCU</li>
         </NavLink>
-        <NavLink className="subNavHome" to="products">
+        <NavLink className="subNavHome" to="/home/products">
           <li>PRODUITS DERIVES</li>
         </NavLink>
-        <NavLink className="subNavHome" to="patchnote">
+        <NavLink className="subNavHome" to="/home/patchnote">
           <li>NOTES DE PATCH</li>
         </NavLink>
       </ol>

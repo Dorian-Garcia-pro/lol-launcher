@@ -7,6 +7,8 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import TFT from "./pages/TFT";
 import Clash from "./pages/Clash";
+/* import SubNavHome from "./components/SubNavHome"; */
+
 function App() {
   return (
     <div className="App">

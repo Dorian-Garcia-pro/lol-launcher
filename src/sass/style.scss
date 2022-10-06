@@ -61,6 +61,8 @@ $heightSocialsFooter : 2.5rem;
 @import 'socials.scss';
 @import 'home.scss';
 @import 'subNavHome.scss';
+@import 'homePreview.scss';
+@import 'homePatchnote.scss';
 
 
 body
@@ -115,6 +117,7 @@ body
 
 #clashContainer, #tftContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;

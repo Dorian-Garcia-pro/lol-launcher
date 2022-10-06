@@ -4,7 +4,7 @@
   justify-content: center;
 }
 
-#homeContainer, #socialsContainer, #mainNavContainer * {
+#homePatchnoteContainer, #homePreviewContainer, #homeContainer, #socialsContainer, #mainNavContainer * {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
   -khtml-user-select: none; /* Konqueror HTML */
@@ -364,11 +364,12 @@ table {
 }
 
 #ppNameStatusClose {
+  min-width: 15rem;
   position: relative;
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding-right: 7rem;
+  /*  padding-right: 7rem;  */
   padding-left: 0.5rem;
 }
 
@@ -400,7 +401,7 @@ table {
 
 #navPPlevels {
   position: absolute;
-  top: 95%;
+  top: 100%;
   right: none;
   bottom: none;
   left: 50%;
@@ -411,12 +412,15 @@ table {
   background-color: #010a13;
   color: rgb(175, 175, 175);
   font-weight: bold;
+  font-size: 0.8rem;
 }
 
 #navNicknameStatus {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  height: 60%;
+  justify-content: flex-end;
 }
 
 #navNickame {
@@ -439,10 +443,19 @@ table {
   border-radius: 50%;
   -webkit-box-shadow: inset 0px 0px 0px 2px rgb(101, 245, 158);
   box-shadow: inset 0px 0px 0px 2px rgb(101, 245, 158);
+  cursor: pointer;
+}
+#navStatusCircle.playerBusy {
+  background-color: black;
+  -webkit-box-shadow: inset 0px 0px 0px 2px darkred;
+  box-shadow: inset 0px 0px 0px 2px darkred;
 }
 
 #navStatusText {
   cursor: pointer;
+}
+#navStatusText.playerBusy {
+  color: grey;
 }
 
 #navPPcloseButtons {
@@ -549,7 +562,7 @@ table {
 
 .catSocialheader {
   display: flex;
-  padding: 8px 4px;
+  padding: 8px 4px 8px 8px;
   /*  margin: 0  0 1rem 0; */
   gap: 0.5rem;
   font-weight: bold;
@@ -614,6 +627,15 @@ table {
   display: flex;
   position: relative;
 }
+.ppFriendCard::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
 .ppFriendCard img {
   aspect-ratio: 1;
   width: 3rem;
@@ -621,15 +643,23 @@ table {
   outline: 2px solid #998446;
   position: relative;
 }
+.ppFriendCard[data-statutType=idle]::after {
+  background-color: rgb(32, 151, 32);
+  -webkit-box-shadow: 0px 0px 0px 2px #66f8a0, 0px 0px 0px 4px black;
+  box-shadow: 0px 0px 0px 2px #66f8a0, 0px 0px 0px 4px black;
+}
 .ppFriendCard[data-statutType=afk]::after {
-  content: "";
-  position: absolute;
-  bottom: 5px;
-  right: -4px;
-  width: 9px;
-  height: 9px;
   background-color: black;
-  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 0px 2px darkred, 0px 0px 0px 4px black;
+  box-shadow: 0px 0px 0px 2px darkred, 0px 0px 0px 4px black;
+}
+.ppFriendCard[data-statutType=queue]::after {
+  background-color: #005176;
+  -webkit-box-shadow: 0px 0px 0px 2px rgb(114, 196, 221), 0px 0px 0px 4px black;
+  box-shadow: 0px 0px 0px 2px rgb(114, 196, 221), 0px 0px 0px 4px black;
+}
+.ppFriendCard[data-statutType=false]::after {
+  background-color: black;
   -webkit-box-shadow: 0px 0px 0px 2px grey, 0px 0px 0px 4px black;
   box-shadow: 0px 0px 0px 2px grey, 0px 0px 0px 4px black;
 }
@@ -705,12 +735,13 @@ table {
   /* min-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px);
   max-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px); */
   /* height: 100%; */
-  background-image: url("https://notagamer.net/wp-content/uploads/2022/01/T2_Prime-Gaming_JAN_1280x720_v1_optimized-1.jpg");
+  /* background-image: url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7b94ccbe5e7a192f/6331e7f4a2ca982a1c793dd1/T2-Prime-SBSyndra-Gaming_1280x720_TTan_v01.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0% 95%;
-  -webkit-box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;
-  box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;
+
+  -webkit-box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000; 
+  box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;  */
 }
 
 #homePreviewRotationChamp {
@@ -777,6 +808,7 @@ table {
   font-size: 0.8rem;
   font-weight: bold;
   letter-spacing: 1px;
+  z-index: 2;
 }
 #subNavHomeContainer ol {
   display: flex;
@@ -813,6 +845,154 @@ table {
   background: radial-gradient(circle, #ffedb4 30%, rgba(215, 186, 98, 0) 100%), radial-gradient(circle, #ffedb4 50%, rgba(215, 186, 98, 0) 100%), radial-gradient(circle, #fadf87 1%, rgba(215, 186, 98, 0) 20%);
   /*       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aeb64b",endColorstr="#d7ba62",GradientType=1);  */
   width: 120%;
+}
+
+#homePreviewContainer {
+  width: 100%;
+  position: relative;
+  /* border: 1px solid $lightGrey; */
+  /* min-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px);
+  max-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px); */
+  height: 100%;
+  background-image: url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7b94ccbe5e7a192f/6331e7f4a2ca982a1c793dd1/T2-Prime-SBSyndra-Gaming_1280x720_TTan_v01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% 95%;
+  -webkit-box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;
+  box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;
+}
+
+#homePreviewRotationChamp {
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+#homePreviewAmazonPrimeContainer {
+  position: absolute;
+  left: 4.2rem;
+  bottom: 10rem;
+}
+#homePreviewAmazonPrimeContainer p {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: rgb(240, 230, 210);
+  font-weight: bold;
+}
+#homePreviewAmazonPrimeContainer p:last-of-type {
+  color: rgb(205, 190, 145);
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+#homePreviewAmazonPrimeContainer button {
+  font-weight: bold;
+  font-size: 1.05rem;
+}
+
+#homePreviewContentRelated {
+  position: absolute;
+  right: 2rem;
+  bottom: 4rem;
+  display: flex;
+  gap: 1rem;
+}
+#homePreviewContentRelated div {
+  /*     max-height: 10rem; */
+  min-width: 10rem;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+#homePreviewContentRelated div img {
+  max-height: 10rem;
+  margin-bottom: 1rem;
+  outline: 2px solid rgb(16, 14, 20);
+}
+#homePreviewContentRelated div:hover img {
+  outline: 2px solid rgb(205, 190, 145);
+}
+#homePreviewContentRelated div:hover {
+  filter: brightness(1.1);
+}
+#homePreviewContentRelated div p {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#homePatchnoteContainer {
+  /*  width: 100%;     */
+  position: relative;
+  height: 100%;
+  margin: 5rem 0 0 0;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+#homePatchnoteContainer h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgb(240, 230, 210);
+  margin-bottom: 0.5rem;
+}
+#homePatchnoteContainer img {
+  min-width: 50rem;
+  max-width: 30rem;
+}
+#homePatchnoteContainer section {
+  width: 50%;
+  padding: 0 0 2rem 2rem;
+}
+#homePatchnoteContainer section h1 {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #41381e;
+  margin-bottom: 2rem;
+}
+#homePatchnoteContainer section p {
+  line-height: 1.4rem;
+}
+#homePatchnoteContainer::-webkit-scrollbar {
+  width: 0.5rem;
+}
+#homePatchnoteContainer::-webkit-scrollbar-track {
+  background: transparent;
+}
+#homePatchnoteContainer::-webkit-scrollbar-thumb {
+  background-color: #c8aa6e;
+  opacity: 0.5;
+  border-radius: 1rem;
+}
+#homePatchnoteContainer::-webkit-scrollbar-thumb:hover {
+  background-color: #cdbe91;
+  opacity: 1;
+}
+
+#titleBannerPatchnote {
+  position: sticky;
+  top: 0;
+  width: calc(100% - 2rem);
+  padding: 0 0 1rem 2rem;
+  background-color: #010a13;
+}
+
+#homePatchnoteAuthorSocials {
+  display: flex;
+  gap: 0.8rem;
+  color: #9c998b;
+}
+
+.patchSummaryLegacy {
+  margin: 2rem 0;
+  color: rgb(240, 230, 210);
+}
+
+.authorsLegacy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+.authorsLegacy span {
+  color: #9c998b;
 }
 
 body {
@@ -863,6 +1043,7 @@ body {
 
 #clashContainer, #tftContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;

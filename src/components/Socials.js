@@ -301,7 +301,7 @@ const Socials = () => {
               .filter((friend) => friend.online === false)
               .map((friend) => (
                 <div className="friendCard friendCardOffline">
-                  <div className="ppFriendCard">
+                  <div className="ppFriendCard" data-statutType={friend.online}>
                     <img
                       src={friend.iconAvatar ? friend.iconAvatar : ppNav}
                       alt="iconAvatrar"

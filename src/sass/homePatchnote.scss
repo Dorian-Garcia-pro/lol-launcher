@@ -1,0 +1,78 @@
+#homePatchnoteContainer {
+@extend %noselect;
+/*  width: 100%;     */
+position: relative;
+height: 100%; 
+margin: 5rem 0 0 0;
+overflow-y: auto;
+max-height: calc(91vh - $heightNav);
+
+& h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: $textIconHover;
+    margin-bottom: 0.5rem;
+}
+& img{
+    min-width: 50rem;
+    max-width: 30rem;
+}
+& section {
+    width: 50%;
+    padding: 0 0 2rem 2rem;
+    & h1 {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid darken($textIcon, 50%);
+        margin-bottom: 2rem;
+    }
+    & p {
+        line-height: 1.4rem;
+    }
+}
+
+&::-webkit-scrollbar {
+    width: 0.5rem;
+}
+&::-webkit-scrollbar-track {
+    background: transparent;
+  }
+&::-webkit-scrollbar-thumb {
+background-color: #c8aa6e;
+opacity: 0.5;
+border-radius: 1rem;   
+    &:hover {
+        background-color: #cdbe91;
+        opacity: 1;
+    }
+}
+}
+#titleBannerPatchnote {
+    position: sticky;
+    top :0;
+    width: calc(100% - 2rem);
+    padding: 0 0 1rem 2rem;
+    background-color: $primaryBlue; 
+
+}
+#homePatchnoteAuthorSocials {
+display: flex;
+gap: 0.8rem;
+color :#9c998b;
+}
+
+.patchSummaryLegacy {
+    margin: 2rem 0;
+    color: $textIconHover;
+ 
+}
+
+.authorsLegacy {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 0.8rem;
+    & span {
+        color:#9c998b;
+    }
+}

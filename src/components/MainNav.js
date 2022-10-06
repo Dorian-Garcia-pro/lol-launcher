@@ -1,6 +1,6 @@
 import React from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import ppNav from "../assets/abdou.png";
 import user from "../assets/user.png";
 import bag from "../assets/bag.png";
 import hammer from "../assets/hammer.png";
@@ -10,6 +10,8 @@ import cog from "../assets/cog.png";
 import close from "../assets/close.png";
 
 const MainNav = () => {
+  const [statusPLayer, setStatusPLayer] = useState(true);
+
   return (
     <div id="mainNavContainer">
       <div id="leftNavPlayHome">
@@ -74,7 +76,10 @@ const MainNav = () => {
       <div id="ppNameStatusClose">
         <div id="navPPlevelsContainer">
           <div id="navPP">
-            <img src={ppNav} alt="ppUser" />
+            <img
+              src="https://preview.redd.it/k1pgg6ilqus41.jpg?auto=webp&s=66b8f592ae429e1922df1b86e345d7aff9603248"
+              alt="ppUser"
+            />
           </div>
           <div id="navPPlevels">158</div>
         </div>
@@ -82,8 +87,17 @@ const MainNav = () => {
         <div id="navNicknameStatus">
           <div id="navNickame">Daz</div>
           <div id="navStatus">
-            <div id="navStatusCircle"></div>
-            <div id="navStatusText">Online</div>
+            <div
+              id="navStatusCircle"
+              className={statusPLayer ? "" : "playerBusy"}
+              onClick={() => setStatusPLayer((prev) => !prev)}
+            ></div>
+            <div
+              id="navStatusText"
+              className={statusPLayer ? "" : "playerBusy"}
+            >
+              {statusPLayer ? "Online" : "Away"}
+            </div>
           </div>
         </div>
         <div id="navPPcloseButtons">
