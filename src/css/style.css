@@ -972,8 +972,8 @@ table {
   width: calc(100% - 2rem);
   padding: 0 0 1rem 2rem;
   background-color: #010a13;
-  -webkit-box-shadow: 0px 7px 25px 5px #000000;
-  box-shadow: 0px 7px 25px 5px #000000;
+  -webkit-box-shadow: 0px 7px 25px 5px #010a13;
+  box-shadow: 0px 7px 25px 5px #010a13;
 }
 
 #homePatchnoteAuthorSocials {
