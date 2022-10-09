@@ -11,10 +11,10 @@ function SubNavHome() {
           </li>
         </NavLink>
         <NavLink className="subNavHome" to="/home/preview">
-          <li>APERCU</li>
+          <li>APERçU</li>
         </NavLink>
         <NavLink className="subNavHome" to="/home/products">
-          <li>PRODUITS DERIVES</li>
+          <li>PRODUITS dérivés</li>
         </NavLink>
         <NavLink className="subNavHome" to="/home/patchnote">
           <li>NOTES DE PATCH</li>

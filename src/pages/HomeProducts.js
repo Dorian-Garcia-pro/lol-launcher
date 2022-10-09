@@ -5,7 +5,7 @@ function HomeProducts() {
   return (
     <div id="homeProductsContainer">
       <div id="homeProductsGrid">
-        <div id="div1" alt="gridproduct">
+        <div id="product1" alt="gridproduct">
           <a
             href="https://merch.riotgames.com/fr-fr/collection/spirit-blossom-collection/"
             target="_blank"
@@ -22,7 +22,7 @@ function HomeProducts() {
             </div>
           </a>
         </div>
-        <div id="div2">
+        <div id="product2">
           <a
             href="https://merch.riotgames.com/fr-fr/product/sugarcone-furyhorn-sitting-plush/"
             target="_blank"
@@ -37,7 +37,7 @@ function HomeProducts() {
           </a>
         </div>
 
-        <div id="div3">
+        <div id="product3">
           <a
             href="https://merch.riotgames.com/fr-fr/product/project-team-minis-set-2"
             target="_blank"
@@ -52,7 +52,7 @@ function HomeProducts() {
           </a>
         </div>
 
-        <div id="div4">
+        <div id="product4">
           <a
             href="https://merch.riotgames.com/fr-fr/product/corki-corgi-plush/"
             target="_blank"
@@ -66,7 +66,7 @@ function HomeProducts() {
             <p>La peluche Corki corgi revient !</p>
           </a>
         </div>
-        <div id="div5">
+        <div id="product5">
           <a
             href="https://merch.riotgames.com/fr-fr/product/infinity-zyra-statue/"
             target="_blank"
@@ -80,7 +80,7 @@ function HomeProducts() {
             <p>Ce n'est pas juste une fleur.</p>
           </a>
         </div>
-        <div id="div6">
+        <div id="product6">
           <a
             href="https://merch.riotgames.com/fr-fr/product/championship-leblanc-unlocked/"
             target="_blank"

@@ -816,6 +816,7 @@ table {
 }
 #subNavHomeContainer ol li {
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .subNavHome:hover {
@@ -1025,27 +1026,27 @@ table {
   max-height: 80vh;
 }
 
-#div1 {
+#product1 {
   grid-area: 1/1/3/3;
 }
 
-#div2 {
+#product2 {
   grid-area: 1/3/2/4;
 }
 
-#div3 {
+#product3 {
   grid-area: 2/3/3/4;
 }
 
-#div4 {
+#product4 {
   grid-area: 3/3/4/4;
 }
 
-#div5 {
+#product5 {
   grid-area: 3/2/4/3;
 }
 
-#div6 {
+#product6 {
   grid-area: 3/1/4/2;
 }
 
@@ -1110,16 +1111,16 @@ table {
 #homeProductsGrid div:not(#mainSquareProducts) img {
   width: 100%;
 }
-#homeProductsGrid div:not(#mainSquareProducts)#div1 {
+#homeProductsGrid div:not(#mainSquareProducts)#product1 {
   position: relative;
   display: flex;
   justify-content: center;
 }
-#homeProductsGrid div:not(#mainSquareProducts)#div1 img:first-of-type {
+#homeProductsGrid div:not(#mainSquareProducts)#product1 img:first-of-type {
   height: 100%;
   width: auto;
 }
-#homeProductsGrid div:not(#mainSquareProducts)#div1 #mainSquareProducts {
+#homeProductsGrid div:not(#mainSquareProducts)#product1 #mainSquareProducts {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
@@ -1131,24 +1132,24 @@ table {
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.51);
   z-index: 1;
 }
-#homeProductsGrid div:not(#mainSquareProducts)#div1 #mainSquareProducts span:first-of-type {
+#homeProductsGrid div:not(#mainSquareProducts)#product1 #mainSquareProducts span:first-of-type {
   font-size: 2rem;
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
 }
-#homeProductsGrid div:not(#mainSquareProducts)#div1 #mainSquareProducts span:last-of-type {
+#homeProductsGrid div:not(#mainSquareProducts)#product1 #mainSquareProducts span:last-of-type {
   text-shadow: 0px 0px 5px rgb(0, 0, 0);
   font-weight: 100;
   color: #998446;
   filter: saturate(20%);
 }
-#homeProductsGrid div:not(#mainSquareProducts)#div3 {
+#homeProductsGrid div:not(#mainSquareProducts)#product3 {
   background-image: url("https://img.freepik.com/free-vector/white-elegant-texture-background-style_23-2148432200.jpg?w=2000");
 }
-#homeProductsGrid div:not(#mainSquareProducts)#div5 {
+#homeProductsGrid div:not(#mainSquareProducts)#product5 {
   display: flex;
   align-items: flex-start;
 }
-#homeProductsGrid div:not(#mainSquareProducts)#div5 img:first-of-type {
+#homeProductsGrid div:not(#mainSquareProducts)#product5 img:first-of-type {
   width: 100%;
 }
 
