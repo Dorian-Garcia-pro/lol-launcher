@@ -63,6 +63,7 @@ $heightSocialsFooter : 2.5rem;
 @import 'subNavHome.scss';
 @import 'homePreview.scss';
 @import 'homePatchnote.scss';
+@import 'homeProducts.scss';
 
 
 body
@@ -121,6 +122,7 @@ body
     justify-content: center;
     align-items: center;
     width: 100%;
+    min-height: 100%;
     & img {
       width: 12rem;
     }

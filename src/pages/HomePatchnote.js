@@ -1,4 +1,6 @@
 import React from "react";
+import fb from "../assets/fb.png";
+import twitter from "../assets/twitter.png";
 
 function HomePatchnote() {
   return (
@@ -7,8 +9,21 @@ function HomePatchnote() {
         <h1>NOTES DE PATCH 12.19</h1>
         <div id="homePatchnoteAuthorSocials">
           <span>RIOT RIRU - HIER</span>
-          <span>FB</span>
-          <span>TW</span>
+          <a
+            href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.leagueoflegends.com%2Ffr-fr%2Fnews%2Fgame-updates%2Fpatch-12-19-notes%2F"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img alt="fb" src={fb}></img>
+          </a>
+
+          <a
+            href="https://twitter.com/intent/tweet?text=Notes%20de%20patch%2012.19%20%7C%20League%20of%20Legends&url=https%3A%2F%2Fwww.leagueoflegends.com%2Ffr-fr%2Fnews%2Fgame-updates%2Fpatch-12-19-notes%2F"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img alt="twitter" src={twitter}></img>
+          </a>
         </div>
       </div>
       <section>
@@ -30,7 +45,7 @@ function HomePatchnote() {
           <span>PAUL « RIOTAETHER » PERSCHEID</span>
         </div>
       </section>
-      <section>
+      <section id="tempsForts">
         <h1>TEMPS FORTS DU PATCH</h1>
         <img
           src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7a0027856886e94f/633c0ab85e9a09115c79aab8/LOL_12.19_PatchNotes-Infographic-_1920x1080_Aveiger_v02_FR.jpg"

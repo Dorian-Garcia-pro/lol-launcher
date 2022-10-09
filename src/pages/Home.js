@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 import SubNavHome from "../components/SubNavHome";
 import HomePreview from "../pages/HomePreview";
 import HomePatchnote from "../pages/HomePatchnote";
+import Clash from "../pages/Clash";
+import HomeProducts from "./HomeProducts";
 
 function Home() {
   let location = useLocation();
@@ -13,13 +15,13 @@ function Home() {
       {(() => {
         switch (location.pathname) {
           case "/home/currentEvent":
-            return <HomePreview />;
+            return <Clash />;
 
           case "/home/preview":
             return <HomePreview />;
 
           case "/home/products":
-            return <HomePreview />;
+            return <HomeProducts />;
 
           case "/home/patchnote":
             return <HomePatchnote />;
