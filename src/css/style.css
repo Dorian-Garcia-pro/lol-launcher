@@ -1094,7 +1094,7 @@ table {
   box-shadow: -1px 20px 50px 80px #000000;
 }
 #homeProductsGrid div:not(#mainSquareProducts):hover {
-  filter: brightness(1.2);
+  filter: brightness(1.05);
   border-image-slice: 1;
   border-width: 2px;
   border-image-source: linear-gradient(to top, #7b5d29, #c8a96c);
