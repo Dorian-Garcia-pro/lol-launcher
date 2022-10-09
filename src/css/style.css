@@ -816,6 +816,7 @@ table {
 }
 #subNavHomeContainer ol li {
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .subNavHome:hover {
