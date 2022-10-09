@@ -16,7 +16,7 @@ function HomeProducts() {
             <div id="mainSquareProducts">
               <span>FLEUR SPIRITUELLE REVIENT !</span>
               <span>
-                De nouveau produits dérivés Fleur spirituelle arrivent dans le
+                De nouveaux produits dérivés Fleur spirituelle arrivent dans le
                 monde des mortels !
               </span>
             </div>
