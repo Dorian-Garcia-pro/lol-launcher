@@ -303,11 +303,16 @@ justify-content: center;
     
 }
 
+#sectionCurrentEvent2 , #sectionCurrentEvent1 {
+    & .homeCurrentEventGridMainFooter {
+        border: 1px solid #321bdd;
+    }
+}
 .homeCurrentEventGridMainFooter {
     min-height: 3rem;
     background-color: whitesmoke;
     display: flex;
-    border: 1px solid #321bdd;
+    border-top: 1px solid #321bdd;
     & .homeCurrentEventGridMainFooterPlayButton {
         aspect-ratio: 1 / 1;
         background-color: #321bdd;
