@@ -5,6 +5,7 @@ import HomePreview from "../pages/HomePreview";
 import HomePatchnote from "../pages/HomePatchnote";
 import Clash from "../pages/Clash";
 import HomeProducts from "./HomeProducts";
+import HomeCurrentEvent from "./HomeCurrentEvent";
 
 function Home() {
   let location = useLocation();
@@ -15,7 +16,7 @@ function Home() {
       {(() => {
         switch (location.pathname) {
           case "/home/currentEvent":
-            return <Clash />;
+            return <HomeCurrentEvent />;
 
           case "/home/preview":
             return <HomePreview />;
