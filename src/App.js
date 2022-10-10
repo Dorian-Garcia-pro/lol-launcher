@@ -3,7 +3,7 @@ import "../src/css/style.css";
 import Socials from "./components/Socials";
 import SocialsFooter from "./components/SocialsFooter";
 import MainNav from "./components/MainNav";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import TFT from "./pages/TFT";
 import Clash from "./pages/Clash";
@@ -15,7 +15,7 @@ function App() {
       <MainNav />
       <div id="bodyApp">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigate to="/home/preview" />} />
           <Route path="/home" element={<Home />}>
             <Route path="currentEvent" element={<Home />} />
             <Route path="preview" element={<Home />} />
@@ -28,7 +28,7 @@ function App() {
           <Route path="/inventory" element={<Clash />} />
           <Route path="/forge" element={<Clash />} />
           <Route path="/shop" element={<Clash />} />
-          <Route path="*" element={<Home to="/" />} />
+          <Route path="*" element={<Home to="/home" />} />
         </Routes>
         <div id="socialsCol">
           <Socials />

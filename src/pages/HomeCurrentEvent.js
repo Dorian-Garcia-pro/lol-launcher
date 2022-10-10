@@ -1,7 +1,8 @@
 import React from "react";
-import sbMerch from "../assets/sbMerch.png";
+/* import sbMerch from "../assets/sbMerch.png";
 import productsArrow from "../assets/productsArrow.png";
 import logo_worlds from "../assets/LOL_Worlds_logo.svg";
+ */
 function HomeCurrentEvent() {
   return (
     <div id="homeCurrentEventContainer">
@@ -54,7 +55,7 @@ function HomeCurrentEvent() {
           </a>
         </div>
         {/*  mid left */}
-        <div id="sectionCurrentEvent5">ee</div>
+        <div id="sectionCurrentEvent5">En cours</div>
         {/*  mid */}
         <div id="sectionCurrentEvent3">
           <div>
@@ -150,7 +151,7 @@ function HomeCurrentEvent() {
           </div>
         </div>
       </div>
-      <div id="homeCurrentEventPlanning"></div>
+      <div id="homeCurrentEventPlanning">En cours</div>
     </div>
   );
 }

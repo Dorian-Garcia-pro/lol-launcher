@@ -6,7 +6,7 @@ height: 100%;
 -webkit-box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000; 
 box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000; 
 
-/* margin: 3rem 0  2rem 0; */
+ margin: 3rem 0  2rem 0; 
 
 overflow: hidden;
 max-height: 84vh;
@@ -16,6 +16,10 @@ display: flex;
 
 #homeCurrentEventGrid {
     display: grid;
+    
+background-image: url(https://images.contentstack.io/v3/assets/bltad9188aa9a70543a/blt3ba7d3ca87334f1c/6140ef1364c8007a9bde98fb/Worlds_2021_Header.jpg?width=3200&height=1800);
+background-size: cover;
+background-position: center;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(7, 1fr) 0.5fr;
     grid-column-gap: 12px;
@@ -148,11 +152,12 @@ display: flex;
     background-color: #181818;
     display: flex;
     justify-content: space-between;
-    padding-left: 1rem;
+/*     padding-left: 1rem; */
     & > svg {
         display: flex;
         height: 100%;
         align-items: center;
+        margin-left: 1rem;
     }
     & div:last-child{
         display: flex;
@@ -167,9 +172,9 @@ display: flex;
         }
         & > p {
             display: flex;
-           justify-content: center;
+            justify-content: center;
+            align-items: center;
             height: 100%;
-                     
             background-color: whitesmoke;
             color: black;
             font-size: 3.5rem;
