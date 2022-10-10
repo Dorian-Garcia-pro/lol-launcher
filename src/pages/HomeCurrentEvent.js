@@ -78,7 +78,7 @@ function HomeCurrentEvent() {
         </div>
         {/*  botttom right */}
         <div id="sectionCurrentEvent2">
-          <div className="homeCurrentEventGridMainFooter">
+          <div className="homeCurrentEventGridMainFooter ">
             <div className="homeCurrentEventGridMainFooterPlayButton">▶</div>
             <div>VOIR LE BRACKET DU MONDIAL</div>
           </div>
