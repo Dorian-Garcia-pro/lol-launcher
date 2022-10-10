@@ -5,6 +5,7 @@ function HomeProducts() {
   return (
     <div id="homeProductsContainer">
       <div id="homeProductsGrid">
+        {/*           SPIRIT BLOSSOM           */}
         <div id="product1" alt="gridproduct">
           <a
             href="https://merch.riotgames.com/fr-fr/collection/spirit-blossom-collection/"
@@ -22,6 +23,7 @@ function HomeProducts() {
             </div>
           </a>
         </div>
+        {/*           furyhorn           */}
         <div id="product2">
           <a
             href="https://merch.riotgames.com/fr-fr/product/sugarcone-furyhorn-sitting-plush/"
@@ -36,7 +38,7 @@ function HomeProducts() {
             <p>Le Corgnon cône à sucre revient !</p>
           </a>
         </div>
-
+        {/*           project-team-minis-set-2           */}
         <div id="product3">
           <a
             href="https://merch.riotgames.com/fr-fr/product/project-team-minis-set-2"
@@ -51,7 +53,7 @@ function HomeProducts() {
             <p>Ensemble PROJET : Mini N°2</p>
           </a>
         </div>
-
+        {/*          corgi corki          */}
         <div id="product4">
           <a
             href="https://merch.riotgames.com/fr-fr/product/corki-corgi-plush/"
@@ -66,6 +68,7 @@ function HomeProducts() {
             <p>La peluche Corki corgi revient !</p>
           </a>
         </div>
+        {/*          zyra         */}
         <div id="product5">
           <a
             href="https://merch.riotgames.com/fr-fr/product/infinity-zyra-statue/"
@@ -80,6 +83,7 @@ function HomeProducts() {
             <p>Ce n'est pas juste une fleur.</p>
           </a>
         </div>
+        {/*          leblanc         */}
         <div id="product6">
           <a
             href="https://merch.riotgames.com/fr-fr/product/championship-leblanc-unlocked/"
