@@ -1439,7 +1439,7 @@ table {
   min-height: 3rem;
   background-color: whitesmoke;
   display: flex;
-  border-top: 1px solid #321bdd;
+  border: 1px solid #321bdd;
   /*   &:hover {
         background-color: red;
     } */
