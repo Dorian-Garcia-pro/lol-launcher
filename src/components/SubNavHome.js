@@ -5,11 +5,11 @@ function SubNavHome() {
   return (
     <div id="subNavHomeContainer">
       <ol>
-        <NavLink className="subNavHome" to="/home/currentEvent">
+{/*         <NavLink className="subNavHome" to="/home/currentEvent">
           <li>
             <p>MONDIAL 2022</p>
           </li>
-        </NavLink>
+        </NavLink> */}
         <NavLink className="subNavHome" to="/home/preview">
           <li>APERçU</li>
         </NavLink>
