@@ -24,7 +24,7 @@ const MainNav = () => {
         <div id="maintenanceLogo"> !</div>
         <nav id="homeTftClash">
           <ol>
-            <NavLink className="mainNavLink" to="/home">
+            <NavLink className="mainNavLink" to="/home/preview">
               <li>HOME</li>
             </NavLink>
             <NavLink className="mainNavLink" to="/tft">
