@@ -1,48 +1,57 @@
 #subNavHomeContainer {
-    position: absolute;    
-    width: 100%;
-    padding: 1rem 4rem;
-    font-size: 0.8rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    z-index: 2;
-    & ol { 
-        display: flex;
-    gap : 3rem;
+  position: absolute;
+  width: 100dvw;
+  padding: 0rem 0 0 4rem;
+  height: $subNavHomeHeight;
+  /*   background-color: red; */
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  & ol {
+    display: flex;
+    gap: 3rem;
     & li {
-        cursor: pointer;
-        text-transform: uppercase;
+      cursor: pointer;
+      text-transform: uppercase;
     }
-}
+  }
 }
 
-.subNavHome{
-    &:hover {
-        color: $textIconHover;
-        }
+.subNavHome {
+  &:hover {
+    color: $textIconHover;
+  }
 }
 
 .subNavHome.active {
-    position: relative;
-    &:hover {
+  position: relative;
+  &:hover {
     color: $textIconHover;
-    }
+  }
 
-    & li{ color: $textIconHover;}
+  & li {
+    color: $textIconHover;
+  }
 
-    &::after, &::before{
-    content: '';
+  &::after,
+  &::before {
+    content: "";
     position: absolute;
     bottom: -0.3rem;
     left: 50%;
-    transform: translate(-50%,-50%);
-} 
-    &::after{
-        height: 1px;
-        margin: 1rem 0 0 0 ;
-        background: #c2b58b;
-       background: radial-gradient(circle, #ffedb4 30%, rgba(215, 186, 98, 0) 100%), radial-gradient(circle, #ffedb4 50%, rgba(215, 186, 98, 0) 100%), radial-gradient(circle, #fadf87 1%, rgba(215, 186, 98, 0) 20%) ;
-/*       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aeb64b",endColorstr="#d7ba62",GradientType=1);  */
-        width: 120%;
-    } 
+    transform: translate(-50%, -50%);
+  }
+  &::after {
+    height: 1px;
+    margin: 1rem 0 0 0;
+    background: #c2b58b;
+    background: radial-gradient(circle, #ffedb4 30%, rgba(215, 186, 98, 0) 100%),
+      radial-gradient(circle, #ffedb4 50%, rgba(215, 186, 98, 0) 100%),
+      radial-gradient(circle, #fadf87 1%, rgba(215, 186, 98, 0) 20%);
+    /*       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aeb64b",endColorstr="#d7ba62",GradientType=1);  */
+    width: 120%;
+  }
 }

@@ -3,8 +3,8 @@ import { useLocation } from "react-router-dom";
 import SubNavHome from "../components/SubNavHome";
 import HomePreview from "../pages/HomePreview";
 import HomePatchnote from "../pages/HomePatchnote";
-import Clash from "../pages/Clash";
-import HomeProducts from "./HomeProducts";
+/* import Clash from "../pages/Clash";
+ */ import HomeProducts from "./HomeProducts";
 import HomeCurrentEvent from "./HomeCurrentEvent";
 
 function Home() {

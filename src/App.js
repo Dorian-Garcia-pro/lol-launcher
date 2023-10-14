@@ -1,5 +1,5 @@
 import "./App.css";
-import "../src/css/style.css";
+import "../src/sass/style.css";
 import Socials from "./components/Socials";
 import SocialsFooter from "./components/SocialsFooter";
 import MainNav from "./components/MainNav";

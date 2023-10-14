@@ -1,4 +1,5 @@
-#navPPlevels, #navPP, .navCurrenciesCol, #rightProfilInvLootShop li, #rightProfilInvLootShopCurrencies, #rightProfilInvLootShop, #homeTftClash li, #maintenanceLogo, #playLogoL, #playLogo div, #leftNavPlayHome {
+#navPPlevels, #navPP, .navCurrenciesCol, #rightProfilInvLootShop li, #rightProfilInvLootShopCurrencies,
+#rightProfilInvLootShop, #homeTftClash li, #maintenanceLogo, #playLogoL, #playLogo div, #leftNavPlayHome {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,8 +11,7 @@
   -khtml-user-select: none; /* Konqueror HTML */
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-   supported by Chrome, Edge, Opera and Firefox */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -803,12 +803,16 @@ table {
 
 #subNavHomeContainer {
   position: absolute;
-  width: 100%;
-  padding: 1rem 4rem;
+  width: 100dvw;
+  padding: 0rem 0 0 4rem;
+  height: 7vh;
+  /*   background-color: red; */
   font-size: 0.8rem;
   font-weight: bold;
   letter-spacing: 1px;
   z-index: 2;
+  display: flex;
+  align-items: center;
 }
 #subNavHomeContainer ol {
   display: flex;
@@ -924,9 +928,9 @@ table {
   /*  width: 100%;     */
   position: relative;
   height: 100%;
-  margin: 5rem 0 0 0;
+  margin: 4rem 0 0 0;
   overflow-y: auto;
-  max-height: 80vh;
+  max-height: 78vh;
 }
 #homePatchnoteContainer h1 {
   font-size: 2rem;
@@ -1021,7 +1025,7 @@ table {
   height: 100%;
   -webkit-box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;
   box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;
-  margin: 3rem 0 2rem 0;
+  margin: 7vh 0 0 0;
   overflow: hidden;
   max-height: 80vh;
 }
@@ -1156,12 +1160,12 @@ table {
 #homeCurrentEventContainer {
   width: 100%;
   position: relative;
-  height: 100%;
+  height: calc(100% - 3rem);
   -webkit-box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;
   box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;
-  margin: 3rem 0 2rem 0;
+  margin: 7vh 0 0 0;
   overflow: hidden;
-  max-height: 84vh;
+  max-height: calc(82vh - 2px - 1px);
   display: flex;
 }
 
@@ -1175,7 +1179,6 @@ table {
   grid-column-gap: 12px;
   grid-row-gap: 12px;
   width: 100%;
-  /*     height: 100%; */
   padding: 1rem 2rem 0 2rem;
 }
 #homeCurrentEventGrid > div {
@@ -1191,7 +1194,8 @@ table {
   grid-area: 8/1/9/5;
 }
 
-#sectionCurrentEvent1:hover .homeCurrentEventGridMainFooter div:first-child, #sectionCurrentEvent2:hover .homeCurrentEventGridMainFooter div:first-child {
+#sectionCurrentEvent1:hover .homeCurrentEventGridMainFooter div:first-child,
+#sectionCurrentEvent2:hover .homeCurrentEventGridMainFooter div:first-child {
   transition: all 0.2s ease-in;
   background-color: whitesmoke;
   color: #321bdd;
@@ -1202,7 +1206,8 @@ table {
   background-image: url(https://cdn.vox-cdn.com/thumbor/1qp28-6tRH6ydG_O6QqDUYHYAfs=/250x250/cdn.vox-cdn.com/uploads/chorus_asset/file/24039196/FdHIT1xXkAAJF7l.jpg);
 }
 
-#sectionCurrentEvent3, #sectionCurrentEvent4 {
+#sectionCurrentEvent3,
+#sectionCurrentEvent4 {
   background-size: cover;
   display: flex;
   color: whitesmoke;
@@ -1211,24 +1216,29 @@ table {
   -webkit-box-shadow: inset 0px -150px 50px -50px rgba(0, 0, 0, 0.8);
   box-shadow: inset 0px -150px 50px -50px rgba(0, 0, 0, 0.8);
 }
-#sectionCurrentEvent3:hover, #sectionCurrentEvent4:hover {
+#sectionCurrentEvent3:hover,
+#sectionCurrentEvent4:hover {
   -webkit-box-shadow: inset 0px -150px 50px -50px rgba(19, 0, 161, 0.8352941176);
   box-shadow: inset 0px -150px 50px -50px rgba(19, 0, 161, 0.8352941176);
 }
-#sectionCurrentEvent3 > div, #sectionCurrentEvent4 > div {
+#sectionCurrentEvent3 > div,
+#sectionCurrentEvent4 > div {
   margin: 0.5rem 0.8rem;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-#sectionCurrentEvent3 > div > p, #sectionCurrentEvent4 > div > p {
+#sectionCurrentEvent3 > div > p,
+#sectionCurrentEvent4 > div > p {
   letter-spacing: 1px;
 }
-#sectionCurrentEvent3 > div > div, #sectionCurrentEvent4 > div > div {
+#sectionCurrentEvent3 > div > div,
+#sectionCurrentEvent4 > div > div {
   display: flex;
   gap: 0.5rem;
 }
-#sectionCurrentEvent3 > div > div > span, #sectionCurrentEvent4 > div > div > span {
+#sectionCurrentEvent3 > div > div > span,
+#sectionCurrentEvent4 > div > div > span {
   color: orange;
 }
 
@@ -1435,7 +1445,8 @@ table {
   align-items: center;
 }
 
-#sectionCurrentEvent2 .homeCurrentEventGridMainFooter, #sectionCurrentEvent1 .homeCurrentEventGridMainFooter {
+#sectionCurrentEvent2 .homeCurrentEventGridMainFooter,
+#sectionCurrentEvent1 .homeCurrentEventGridMainFooter {
   border: 1px solid #321bdd;
 }
 
@@ -1478,8 +1489,7 @@ body {
 
 #bodyApp {
   display: flex;
-  min-height: calc(89vh - 3px);
-  /*  background-color: red; */
+  min-height: calc(89vh - 2px - 1px);
   justify-content: flex-end;
 }
 
@@ -1515,7 +1525,8 @@ body {
   box-shadow: inset 0px -5px 20px 1px rgba(203, 173, 115, 0.4509803922);
 }
 
-#clashContainer, #tftContainer {
+#clashContainer,
+#tftContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1523,7 +1534,8 @@ body {
   width: 100%;
   min-height: 100%;
 }
-#clashContainer img, #tftContainer img {
+#clashContainer img,
+#tftContainer img {
   width: 12rem;
 }
 
