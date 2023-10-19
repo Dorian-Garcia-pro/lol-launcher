@@ -31,7 +31,7 @@ function HomeCurrentEvent() {
             target="_blank"
             rel="noreferrer"
           >
-            <p>BABLER'S NEW JUNGLE ROUTE</p>
+            <p>BLABER'S NEW JUNGLE ROUTE</p>
             <p className="subText">THAT DOESN'T MAKE SENSE, BUT WORKS!</p>
           </a>
         </div>
