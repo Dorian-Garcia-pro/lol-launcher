@@ -1,86 +1,81 @@
 #homeContainer {
-@extend %noselect;
-width: 100%;    
-position: relative;
-/* border: 1px solid $lightGrey; */
-/* min-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px);
+  @extend %noselect;
+  width: 100%;
+  position: relative;
+  /* border: 1px solid $lightGrey; */
+  /* min-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px);
 max-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px); */
-/* height: 100%; */
-/* background-image: url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7b94ccbe5e7a192f/6331e7f4a2ca982a1c793dd1/T2-Prime-SBSyndra-Gaming_1280x720_TTan_v01.jpg");
+  /* height: 100%; */
+  /* background-image: url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7b94ccbe5e7a192f/6331e7f4a2ca982a1c793dd1/T2-Prime-SBSyndra-Gaming_1280x720_TTan_v01.jpg");
 background-repeat: no-repeat;
 background-size: cover;
 background-position: 0% 95%;
 
 -webkit-box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000; 
 box-shadow: inset 0px 75px 100px 0px #000000, inset 0px -75px 100px 0px #000000;  */
-
 }
 
 #homePreviewRotationChamp {
-position: absolute;
-right: 2rem;
-top : 2rem;
-
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
 }
 
 #homePreviewAmazonPrimeContainer {
-    position: absolute;
+  position: absolute;
 
-    left: 4.2rem;
-    bottom : 10rem;
- 
-    & p {
-    
-        font-size: 2rem;
-        margin: 0.5rem 0;
-        color: $textIconHover;
-        font-weight: bold;
-        &:last-of-type {
-            color: $textIcon;
-            font-size: 1.5rem;
-            margin: 1rem 0;
-        }
+  left: 4.2rem;
+  bottom: 10rem;
+
+  & p {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+    color: $textIconHover;
+    font-weight: bold;
+    &:last-of-type {
+      color: $textIcon;
+      font-size: 1.5rem;
+      margin: 1rem 0;
     }
-    & button {
-        font-weight: bold;
-        font-size: 1.05rem;
-    }
-    
+  }
+  & button {
+    font-weight: bold;
+    font-size: 1.05rem;
+  }
 }
 
-#homePreviewContentRelated {
+// #homePreviewContentRelated {
 
-    position: absolute;
-    right: 2rem;
-    bottom : 4rem;
-    display: flex;
-    gap: 1rem;
+//     position: absolute;
+//     right: 2rem;
+//     bottom : 4rem;
+//     display: flex;
+//     gap: 1rem;
 
-    & div {
-/*     max-height: 10rem; */
-    min-width: 10rem;
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    
-    
-        & img {
-            max-height: 10rem;
-            margin-bottom: 1rem;
-            outline: 2px solid rgb(16, 14, 20);
-            
-        }
-        &:hover img { 
-            outline: 2px solid $textIcon;
-         }
-        &:hover {
-            filter: brightness(1.1);
-        }
-        & p {
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-     
-    }
+//     & div {
+// /*     max-height: 10rem; */
+//     min-width: 10rem;
+//     display: flex;
+//     flex-direction: column;
+//     cursor: pointer;
 
-}
+//         & img {
+//             max-height: 10rem;
+//             margin-bottom: 1rem;
+//             outline: 2px solid rgb(16, 14, 20);
+
+//         }
+//         &:hover img {
+//             outline: 2px solid $textIcon;
+//          }
+//         &:hover {
+//             filter: brightness(1.1);
+//         }
+//         & p {
+//             font-weight: bold;
+//             letter-spacing: 1px;
+//         }
+
+//     }
+
+// }

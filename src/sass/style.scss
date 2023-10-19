@@ -1,3 +1,5 @@
+/* sass --watch src/sass/style.scss src/sass/style.css */
+
 @import "libs/_variables.scss";
 
 %flexCenterXY {
@@ -94,6 +96,15 @@ body {
     -webkit-box-shadow: inset 0px 0px 5px 1px lighten(#c8a96c73, 2%);
     box-shadow: inset 0px -5px 20px 1px lighten(#c8a96c73, 2%);
   }
+}
+
+.rpIcon,
+.beIcon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.rpIcon {
+  filter: invert(1) saturate(50) hue-rotate(0deg);
 }
 
 #clashContainer,

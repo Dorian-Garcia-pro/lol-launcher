@@ -8,6 +8,8 @@ import coins from "../assets/coins.png";
 import lolIcon from "../assets/lol_icon.png";
 import cog from "../assets/cog.png";
 import close from "../assets/close.png";
+import rp from "../assets/rp.webp";
+import be from "../assets/be.webp";
 
 const MainNav = () => {
   const [statusPLayer, setStatusPLayer] = useState(true);
@@ -64,8 +66,12 @@ const MainNav = () => {
         <div id="NavSpacerCurrencies"></div>
         <div id="NavCurrencies">
           <div className="navCurrenciesCol" id="navCurrenciesIcons">
-            <p id="RPicon">RP</p>
-            <p id="BEicon">BE</p>
+            <p id="RPicon">
+              <img src={rp} className="rpIcon" alt="RPicon"></img>
+            </p>
+            <p id="BEicon">
+              <img src={be} className="beIcon" alt="beIcon"></img>
+            </p>
           </div>
           <div className="navCurrenciesCol" id="navCurrenciesValue">
             <p className="navValueCurrency">166</p>
