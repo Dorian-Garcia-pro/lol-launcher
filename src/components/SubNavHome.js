@@ -6,9 +6,7 @@ function SubNavHome() {
     <div id="subNavHomeContainer">
       <ol>
         <NavLink className="subNavHome" to="/home/currentEvent">
-          <li>
-            <p>WORLDS 2023</p>
-          </li>
+          <li>WORLDS 2023</li>
         </NavLink>
         <NavLink className="subNavHome" to="/home/preview">
           <li>OVERVIEW</li>

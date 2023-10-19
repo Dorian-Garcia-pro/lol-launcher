@@ -26,7 +26,7 @@ const MainNav = () => {
         <div id="maintenanceLogo"> !</div>
         <nav id="homeTftClash">
           <ol>
-            <NavLink className="mainNavLink" to="/home/preview">
+            <NavLink className="mainNavLink" to="/home">
               <li>HOME</li>
             </NavLink>
             <NavLink className="mainNavLink" to="/tft">
@@ -51,6 +51,7 @@ const MainNav = () => {
                 <img src={bag} alt="bag" />
               </li>
             </NavLink>
+
             <NavLink className="mainNavLink" to="/forge">
               <li>
                 <img src={hammer} alt="hammer" />
@@ -65,17 +66,15 @@ const MainNav = () => {
         </nav>
         <div id="NavSpacerCurrencies"></div>
         <div id="NavCurrencies">
-          <div className="navCurrenciesCol" id="navCurrenciesIcons">
-            <p id="RPicon">
+          <div className="navCurrencies">
+            <div className="navCurrency">
               <img src={rp} className="rpIcon" alt="RPicon"></img>
-            </p>
-            <p id="BEicon">
+              <p className="navValueCurrency">1991</p>
+            </div>
+            <div className="navCurrency">
               <img src={be} className="beIcon" alt="beIcon"></img>
-            </p>
-          </div>
-          <div className="navCurrenciesCol" id="navCurrenciesValue">
-            <p className="navValueCurrency">166</p>
-            <p className="navValueCurrency">16104</p>
+              <p className="navValueCurrency">32.1K</p>
+            </div>
           </div>
         </div>
       </div>

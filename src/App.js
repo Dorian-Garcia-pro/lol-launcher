@@ -16,6 +16,7 @@ function App() {
       <div id="bodyApp">
         <Routes>
           <Route path="/" element={<Navigate to="/home/preview" />} />
+          <Route path="/home" element={<Navigate to="/home/preview" />} />
           <Route path="/home" element={<Home />}>
             <Route path="currentEvent" element={<Home />} />
             <Route path="preview" element={<Home />} />

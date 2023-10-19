@@ -1,5 +1,5 @@
 /* sass --watch src/sass/style.scss src/sass/style.css */
-#navPPlevels, #navPP, .navCurrenciesCol, #rightProfilInvLootShop li, #rightProfilInvLootShopCurrencies,
+#navPPlevels, #navPP, #rightProfilInvLootShop li, #rightProfilInvLootShopCurrencies,
 #rightProfilInvLootShop, #homeTftClash li, #maintenanceLogo, #playLogoL, #playLogo div, #leftNavPlayHome {
   display: flex;
   align-items: center;
@@ -256,6 +256,7 @@ table {
   padding: 0 1.2rem;
   height: 100%;
   cursor: pointer;
+  font-size: 1vw;
 }
 #homeTftClash li:active {
   color: #b9903e;
@@ -315,30 +316,31 @@ table {
   filter: brightness(80%) saturate(200%);
 }
 #rightProfilInvLootShop img {
-  width: 2rem;
+  width: 2vw;
 }
 
 #NavSpacerCurrencies {
   height: 80%;
-  margin: 0 0 0 0.7rem;
+  margin: 0 0.2vw;
   background: #c2b58b;
   background: -moz-radial-gradient(circle, #c2b58b 18%, rgba(215, 186, 98, 0) 100%);
   background: -webkit-radial-gradient(circle, #c2b58b 18%, rgba(215, 186, 98, 0) 100%);
   background: radial-gradient(circle, #c2b58b 18%, rgba(215, 186, 98, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aeb64b",endColorstr="#d7ba62",GradientType=1);
-  width: 1px;
+  width: 2px;
 }
 
-#NavCurrencies {
+.navCurrencies {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 2vw 0 1vw;
+}
+.navCurrencies div {
   display: flex;
   flex-direction: row;
-  padding: 0 2rem 0 2rem;
-}
-
-.navCurrenciesCol {
-  flex-direction: column;
-  margin: 0 0.4rem;
-  gap: 0.5rem;
+  gap: 0.3vw;
+  align-items: center;
 }
 
 #navCurrenciesIcons {
@@ -362,7 +364,7 @@ table {
 .navValueCurrency {
   font-weight: bold;
   color: rgb(240, 230, 210);
-  letter-spacing: 3px;
+  font-size: 0.9rem;
 }
 
 #ppNameStatusClose {
