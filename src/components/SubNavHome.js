@@ -7,17 +7,17 @@ function SubNavHome() {
       <ol>
 {/*         <NavLink className="subNavHome" to="/home/currentEvent">
           <li>
-            <p>MONDIAL 2022</p>
+            <p>WORLDS 2023</p>
           </li>
         </NavLink> */}
         <NavLink className="subNavHome" to="/home/preview">
-          <li>APERçU</li>
+          <li>OVERVIEW</li>
         </NavLink>
         <NavLink className="subNavHome" to="/home/products">
-          <li>PRODUITS dérivés</li>
+          <li>MERCH</li>
         </NavLink>
         <NavLink className="subNavHome" to="/home/patchnote">
-          <li>NOTES DE PATCH</li>
+          <li>PATCH NOTES</li>
         </NavLink>
       </ol>
     </div>
