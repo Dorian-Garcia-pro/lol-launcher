@@ -120,7 +120,7 @@ const Socials = () => {
       categorie: "general",
       online: true,
       statuType: "afk",
-      statut: "f**ck &#@!$",
+      statut: "&#@!$",
       iconAvatar:
         "https://i.ytimg.com/an/T1jXFSj4pTM/62bb520a-cf71-436b-b037-3c7b6941a10f_mq.jpg?v=5cc8e37f",
     },

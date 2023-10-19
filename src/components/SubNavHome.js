@@ -7,7 +7,7 @@ function SubNavHome() {
       <ol>
         <NavLink className="subNavHome" to="/home/currentEvent">
           <li>
-            <p>WORLDS 2022</p>
+            <p>WORLDS 2023</p>
           </li>
         </NavLink>
         <NavLink className="subNavHome" to="/home/preview">
