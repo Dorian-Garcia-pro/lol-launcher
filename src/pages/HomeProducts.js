@@ -1,5 +1,4 @@
 import React from "react";
-import sbMerch from "../assets/sbMerch.png";
 import productsArrow from "../assets/productsArrow.png";
 function HomeProducts() {
   return (

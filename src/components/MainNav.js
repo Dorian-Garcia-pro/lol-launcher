@@ -7,7 +7,6 @@ import hammer from "../assets/hammer.png";
 import trophy from "../assets/trophy.png";
 import coins from "../assets/coins.png";
 import lolIcon from "../assets/lol_icon.png";
-import lolworldsLogo from "../assets/lolworldslogo.png";
 import cog from "../assets/cog.png";
 import close from "../assets/close.png";
 import rp from "../assets/rp.webp";
