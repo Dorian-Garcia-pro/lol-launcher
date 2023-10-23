@@ -304,6 +304,10 @@ function HomeCurrentEvent() {
           >
             <p>BLABER'S NEW JUNGLE ROUTE</p>
             <p className="subText">THAT DOESN'T MAKE SENSE, BUT WORKS!</p>
+            <img
+              src="https://img.icons8.com/ios-filled/50/play--v1.png"
+              alt="play--v1"
+            />
           </a>
         </div>
 

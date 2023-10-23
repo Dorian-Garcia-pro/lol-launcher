@@ -325,6 +325,7 @@
   @extend %flexCenterXY;
   position: relative;
   aspect-ratio: 1/1;
+  min-height: 40px;
   max-height: calc($heightNav - 4vh);
   background-color: darkblue;
   border-radius: 99vh;
