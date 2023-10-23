@@ -1469,6 +1469,36 @@ body {
   justify-content: flex-end;
 }
 
+@media (max-width: 1080px) {
+  .App {
+    background-color: black;
+  }
+  .App > * {
+    display: none;
+  }
+  #bodyApp {
+    display: none;
+  }
+  #mainNavContainer {
+    display: none;
+  }
+  #mobileMode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-size: 2rem;
+    padding: 0 10vw 10vh 10vw;
+  }
+  #mobileMode img {
+    max-width: 50vw;
+  }
+  #mobileMode p {
+    text-align: center;
+  }
+}
 .greyed {
   filter: saturate(0) brightness(40%);
 }
