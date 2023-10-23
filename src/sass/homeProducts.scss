@@ -1,5 +1,3 @@
-@import "libs/variables.scss";
-
 #homeProductsContainer {
   @extend %noselect;
   width: 100%;
@@ -14,23 +12,61 @@
   max-height: 80vh;
 }
 
+.productCell {
+  background-size: cover;
+  background-position: center;
+  & a > p {
+    font-size: 1.2rem;
+  }
+}
+
 #product1 {
   grid-area: 1 / 1 / 3 / 3;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-image: url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt6b1183dccdaea6bd/651ca0d9ff4a201cc4cb15f1/10YR.VINYL.1920x1080-IN_CLIENT_IMAGE.jpg");
+
+  & #mainSquareProducts {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.51);
+    z-index: 1;
+    & span:first-of-type {
+      font-size: 2rem;
+      text-shadow: 0px 0px 5px rgb(0 0 0);
+    }
+    & span:last-of-type {
+      text-shadow: 0px 0px 5px rgb(0 0 0);
+      font-weight: 100;
+    }
+  }
 }
 #product2 {
   grid-area: 1 / 3 / 2 / 4;
+  background-image: url("https://images.contentstack.io/v3/assets/blt5bbf09732528de36/bltf1be12ce36c2c350/65136bb25f359cb4e584294f/Worlds_2023_Ahri_Fox_Plush_Promo_PDP_Image_Module_2560x1440.jpg?auto=webp&width=983&quality=85");
 }
 #product3 {
   grid-area: 2 / 3 / 3 / 4;
+  background-image: url("https://images.contentstack.io/v3/assets/blt5bbf09732528de36/blte4c953e14b9b1e10/6513837314893acfbfce65a3/Worlds_2023_Championship_Baron_Figure_Promo_PDP_Image_Module_2560x1440.jpg?auto=webp&width=983&quality=85");
 }
 #product4 {
   grid-area: 3 / 3 / 4 / 4;
+  background-image: url("https://esi.si.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MjAwOTYxNDQwMzIyOTU0NjQx/collector-edition-1.jpg");
 }
 #product5 {
   grid-area: 3 / 2 / 4 / 3;
+  background-image: url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt1e68c6663e34767a/65162a19b258109f0b804f6d/Copy_of_Worlds_2023_VarsityJacket_ClientBanner_1920x1080.jpg");
 }
 #product6 {
   grid-area: 3 / 1 / 4 / 2;
+  background-image: url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt3d9077f6423666c5/651c6006375d9830429cdfbf/varsityjacket_client_1920x1080_opt.jpg");
 }
 
 #homeProductsGrid {
@@ -39,8 +75,8 @@
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 1rem;
   grid-row-gap: 1rem;
-  max-width: 100%;
-  max-height: 80vh;
+  min-width: 100%;
+  min-height: 80vh;
   padding: 0 2rem 0 2rem;
   background-color: $primaryBlue;
 
@@ -49,8 +85,6 @@
     background-color: transparent;
     max-width: 100%;
     max-height: 100%;
-    background-image: attr(data-img-bg url);
-    background-size: cover;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -61,8 +95,8 @@
     & img:last-of-type {
       position: absolute;
       width: 1rem;
-      bottom: 1.5rem;
-      right: 1.5rem;
+      top: 12px;
+      right: 12px;
       z-index: 1;
       transform: rotate(-45deg);
       filter: brightness(1.2);
@@ -92,56 +126,6 @@
       font-weight: bold;
       text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.51);
       z-index: 1;
-    }
-
-    & img {
-      width: 100%;
-    }
-
-    &#product1 {
-      position: relative;
-      display: flex;
-      justify-content: center;
-
-      & img:first-of-type {
-        height: 100%;
-        width: auto;
-      }
-
-      & #mainSquareProducts {
-        position: absolute;
-        bottom: 1rem;
-        left: 1rem;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        font-weight: bold;
-        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.51);
-        z-index: 1;
-        & span:first-of-type {
-          font-size: 2rem;
-          text-shadow: 0px 0px 5px rgb(0 0 0);
-        }
-        & span:last-of-type {
-          text-shadow: 0px 0px 5px rgb(0 0 0);
-          font-weight: 100;
-          color: darken($color: $golden, $amount: 0);
-          filter: saturate(20%);
-        }
-      }
-    }
-
-    &#product3 {
-      background-image: url("https://img.freepik.com/free-vector/white-elegant-texture-background-style_23-2148432200.jpg?w=2000");
-    }
-
-    &#product5 {
-      display: flex;
-      align-items: flex-start;
-      & img:first-of-type {
-        width: 100%;
-      }
     }
   }
 }

@@ -134,11 +134,170 @@
       }
     }
     &[data-cell="planning"] {
+      $paddingBottomFooter: 4vh;
+      $heightToggle: 4vh;
       grid-area: #{$firstRow} / #{$lastCol - $rightColWidth} / 8 / #{$lastCol +
         1};
+      position: relative;
+      outline: 1px solid whitesmoke;
+      background-color: whitesmoke;
+      color: black;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      overflow-y: scroll;
+      cursor: default;
       &:hover {
         -webkit-box-shadow: none;
         box-shadow: none;
+      }
+
+      &::-webkit-scrollbar {
+        width: 0.5vw;
+        border: 1px solid whitesmoke;
+        padding-left: 1px;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: blue;
+        opacity: 0.5;
+        &:hover {
+          background-color: #cdbe91;
+          opacity: 1;
+        }
+      }
+
+      & > header,
+      & > footer,
+      .stageCategory {
+        color: whitesmoke;
+        background-color: #000000;
+        position: sticky;
+        z-index: 3;
+      }
+      & > header {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+      }
+      & > footer {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: $paddingBottomFooter;
+        padding: 0.5vh 0 0.5vh 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        font-weight: bolder;
+        & > a {
+          display: flex;
+          align-items: center;
+          gap: 0.2vw;
+        }
+        & img {
+          width: 1.8rem;
+        }
+      }
+
+      & .stageCategory {
+        top: $heightToggle;
+        left: 0;
+        right: 0;
+        z-index: 2;
+      }
+      & header > .toggleSpoilers,
+      footer {
+        @extend %hoverEffectBlue;
+        cursor: pointer;
+      }
+      & .toggleSpoilers {
+        outline: 1px solid whitesmoke;
+        padding: 0.8vh 0 1vh 0;
+        text-align: center;
+        height: $heightToggle;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5vw;
+        transition: all 0.2s ease-in-out;
+        .btnToggleSpoilers {
+          width: 2vw;
+          height: 2vh;
+          background-color: transparent;
+          border-radius: 25px;
+          border: 1px solid whitesmoke;
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          justify-content: flex-start;
+          transform: translateX(0);
+          &[data-toggle="true"] {
+            background-color: blue;
+          }
+          & > span {
+            background-color: whitesmoke;
+            margin: 0 5%;
+            aspect-ratio: 1/1;
+            width: 40%;
+            border-radius: 50vh;
+          }
+          &[data-toggle="true"] > span {
+            transition: all 0.2s ease-in-out;
+            transform: translateX(125%);
+          }
+          &[data-toggle="false"] > span {
+            transition: all 0.2s ease-in-out;
+            transform: translateX(0);
+          }
+        }
+      }
+
+      & .stageCategory {
+        font-size: 1.8vw;
+        font-weight: bolder;
+        text-align: center;
+        padding: 1vh 0 1.5vh 0;
+      }
+
+      & .planningCell {
+        & .dateAndboType {
+          display: flex;
+          outline: 1px solid black;
+          padding: 1vh 1vw;
+          justify-content: space-between;
+          font-weight: bold;
+          & .BOtype {
+            font-size: small;
+          }
+        }
+        & .logoTeamScoreContainer {
+          display: flex;
+          flex-direction: column;
+          gap: 1vh;
+          padding: 1vh 0;
+        }
+        & .logoTeamScore {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 2vw 0 1vw;
+          font-weight: bolder;
+        }
+        & .logoTeam {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.8vw;
+
+          & img {
+            width: 2vw;
+            filter: saturate(0) brightness(0.1);
+          }
+        }
       }
     }
     &[data-cell="worldPass"] {
@@ -178,13 +337,8 @@
     height: 100%;
     align-items: center;
     padding: 0.5rem;
-    transition: all 0.2s ease-in-out;
-    &:hover {
-      background-color: #0000ff;
-      & > a > img {
-        filter: saturate(0) brightness(999);
-      }
-    }
+
+    @extend %hoverEffectBlue;
   }
   & > div > a {
     display: flex;

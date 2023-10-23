@@ -15,8 +15,8 @@ function App() {
       <MainNav />
       <div id="bodyApp">
         <Routes>
-          <Route path="/" element={<Navigate to="/home/preview" />} />
-          <Route path="/home" element={<Navigate to="/home/preview" />} />
+          <Route path="/" element={<Navigate to="/home/currentEvent" />} />
+          <Route path="/home" element={<Navigate to="/home/currentEvent" />} />
           <Route path="/home" element={<Home />}>
             <Route path="currentEvent" element={<Home />} />
             <Route path="preview" element={<Home />} />

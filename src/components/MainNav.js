@@ -4,8 +4,10 @@ import { NavLink } from "react-router-dom";
 import user from "../assets/user.png";
 import bag from "../assets/bag.png";
 import hammer from "../assets/hammer.png";
+import trophy from "../assets/trophy.png";
 import coins from "../assets/coins.png";
 import lolIcon from "../assets/lol_icon.png";
+import lolworldsLogo from "../assets/lolworldslogo.png";
 import cog from "../assets/cog.png";
 import close from "../assets/close.png";
 import rp from "../assets/rp.webp";
@@ -32,15 +34,20 @@ const MainNav = () => {
             <NavLink className="mainNavLink" to="/tft">
               <li>TFT</li>
             </NavLink>
-            <NavLink className="mainNavLink" to="/clash">
+            {/*          <NavLink className="mainNavLink" to="/clash">
               <li>CLASH</li>
-            </NavLink>
+            </NavLink> */}
           </ol>
         </nav>
       </div>
       <div id="rightProfilInvLootShopCurrencies">
         <nav id="rightProfilInvLootShop">
           <ol>
+            <NavLink className="mainNavLink" to="/clash">
+              <li>
+                <img src={trophy} alt="clash" />
+              </li>
+            </NavLink>
             <NavLink className="mainNavLink" to="/user">
               <li>
                 <img src={user} alt="user" />
@@ -51,7 +58,7 @@ const MainNav = () => {
                 <img src={bag} alt="bag" />
               </li>
             </NavLink>
-
+            <div id="NavSpacerCurrencies"></div>
             <NavLink className="mainNavLink" to="/forge">
               <li>
                 <img src={hammer} alt="hammer" />

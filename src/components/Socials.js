@@ -58,17 +58,16 @@ const Socials = () => {
       online: true,
       statuType: "queue",
       statut: "In Game",
-      iconAvatar:
-        "https://preview.redd.it/jvj4s4y240331.png?auto=webp&s=b2d3444ff04a7a2c5d1ae682750ce465b773a400",
+      iconAvatar: "https://i.redd.it/2vbdbmsovwz31.jpg",
     },
     {
       name: "GROTEK",
       categorie: "leSang",
-      online: false,
-      statuType: "queue",
-      statut: "Grotesque",
+      online: true,
+      statuType: "idle",
+      statut: "ARAM ? ",
       iconAvatar:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhzwZzJEUCKLkpBltM6K_2BeUX0_v_flpWxHvnLFJJAfhRDes8tOD3SmfMCHCu4YUK2Pg&usqp=CAU",
+        "https://i.pinimg.com/736x/17/c0/f9/17c0f905e9b0f23c5641947921fb8c53.jpg",
     },
     {
       name: "Mello El Pinso",
@@ -163,7 +162,7 @@ const Socials = () => {
             <div className="arrowCatSocial" data-opened={socialCatOpenedSang}>
               <img src={triangle} alt="triangle" />
             </div>
-            <p>LE SANG</p>
+            <p>LA FAMILLE</p>
             <p>
               (
               {

@@ -27,6 +27,16 @@
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
+%hoverEffectBlue {
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: #0000ff;
+    & > a > img {
+      filter: saturate(0) brightness(999);
+    }
+  }
+}
+
 @mixin absolute-el($top, $right, $bottom, $left, $x, $y) {
   position: absolute;
   top: $top;
@@ -104,7 +114,7 @@ body {
   height: 1.2rem;
 }
 .rpIcon {
-  filter: invert(1) saturate(50) hue-rotate(0deg);
+  filter: invert(1) saturate(8) hue-rotate(330deg);
 }
 
 #clashContainer,

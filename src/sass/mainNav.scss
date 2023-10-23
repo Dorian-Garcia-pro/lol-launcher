@@ -225,8 +225,10 @@
   & ol {
     display: flex;
     height: 100%;
+    align-items: center;
     & a {
       position: relative;
+      height: 100%;
     }
   }
   & li {
@@ -322,10 +324,10 @@
 #navPP {
   @extend %flexCenterXY;
   position: relative;
-  aspect-ratio: 1;
-  width: 3.5rem;
+  aspect-ratio: 1/1;
+  max-height: calc($heightNav - 4vh);
   background-color: darkblue;
-  border-radius: 50%;
+  border-radius: 99vh;
   border: 2px solid $golden;
   box-shadow: 0 0 0 4px $primaryBlue, 0 0 0 6px $golden;
   overflow: hidden;
@@ -401,13 +403,11 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 100%;
   padding-right: 0.5rem;
   font-weight: bold;
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-  gap: 0.5rem;
   color: $textIconHover;
   & div {
     opacity: 0.7;

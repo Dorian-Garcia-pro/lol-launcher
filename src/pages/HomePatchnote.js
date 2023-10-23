@@ -6,9 +6,9 @@ function HomePatchnote() {
   return (
     <div id="homePatchnoteContainer">
       <div id="titleBannerPatchnote">
-        <h1>NOTES DE PATCH 12.19</h1>
+        <h1>PATCH NOTE 12.19</h1>
         <div id="homePatchnoteAuthorSocials">
-          <span>RIOT RIRU - HIER</span>
+          <span>RIOT RIRU - A long time ago</span>
           <a
             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.leagueoflegends.com%2Ffr-fr%2Fnews%2Fgame-updates%2Fpatch-12-19-notes%2F"
             target="_blank"
@@ -28,17 +28,16 @@ function HomePatchnote() {
       </div>
       <section>
         <p className="patchSummaryLegacy">
-          " Des buffs pour Blitzcrank combattant ? Des buffs pour Rakan AP ?
+          "Buffs for Fighter Blitzcrank? Buffs for AP Rakan?
           <br></br>
           <br></br>
-          Est-ce un rêve, ou est-ce le patch 12.19 ? Dans ce patch, nous offrons
-          une mise à jour de moyenne ampleur à Syndra. N'oubliez aucun
-          paragraphe pour en apprendre plus sur ses compétences améliorées ou
-          ajustées ! Ce patch comprend également quelques buffs pour des builds
-          hors méta et la mise à jour visuelle de Janna qui va faire souffler un
-          vent nouveau sur la Faille. Vous découvrirez aussi ci-dessous des
-          informations sur le nouveau système de passe d'événement amélioré.
-          Merci de nous avoir lus, et à bientôt dans la Faille ! "
+          Is it a dream, or is it Patch 12.19? In this patch, we are providing a
+          moderate update to Syndra. Don't miss any paragraph to learn more
+          about her improved or adjusted abilities! This patch also includes
+          some buffs for off-meta builds and the visual update of Janna, which
+          will bring a breath of fresh air to the Rift. Below, you will also
+          find information about the new and improved event pass system. Thank
+          you for reading, and see you soon on the Rift!"
         </p>
         <div className="authorsLegacy">
           <span>LILU « RIOT RIRU » CABREROS</span>
@@ -46,17 +45,17 @@ function HomePatchnote() {
         </div>
       </section>
       <section id="tempsForts">
-        <h1>TEMPS FORTS DU PATCH</h1>
+        <h1>HIGHLIGHTS</h1>
         <img
           src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7a0027856886e94f/633c0ab85e9a09115c79aab8/LOL_12.19_PatchNotes-Infographic-_1920x1080_Aveiger_v02_FR.jpg"
           alt="patch"
         />
         <p>
-          Aphelios fleur spirituelle, Darius fleur spirituelle, Evelynn fleur
-          spirituelle, Maître Yi fleur spirituelle, Sett fleur spirituelle,
-          Soraka fleur spirituelle, Syndra fleur spirituelle, Tristana fleur
-          spirituelle, Yorick fleur spirituelle et Maître Yi fleur spirituelle
-          prestige seront disponibles à partir du 6 octobre 2022.
+          Aphelios Spirit Blossom, Darius Spirit Blossom, Evelynn Spirit
+          Blossom, Master Yi Spirit Blossom, Sett Spirit Blossom, Soraka Spirit
+          Blossom, Syndra Spirit Blossom, Tristana Spirit Blossom, Yorick Spirit
+          Blossom, and Master Yi Spirit Blossom Prestige will be available
+          starting from October 6, 2022
         </p>
       </section>
     </div>
