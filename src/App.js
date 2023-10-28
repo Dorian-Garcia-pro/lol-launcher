@@ -2,7 +2,7 @@ import "./App.css";
 import "../src/sass/style.css";
 import Socials from "./components/Socials";
 import MainNav from "./components/MainNav";
-import { Route, Routes, Navigate, HashRouter } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import TFT from "./pages/TFT";
 import Clash from "./pages/Clash";
@@ -13,30 +13,24 @@ function App() {
     <div className="App">
       <MainNav />
       <div id="bodyApp">
-        <HashRouter>
-          <Routes>
-            <Route path="/" element={<Navigate to="/home/currentEvent" />} />
-            <Route
-              path="/home"
-              element={<Navigate to="/home/currentEvent" />}
-            />
-            <Route path="/home" element={<Home />}>
-              <Route path="currentEvent" element={<Home />} />
-              <Route path="preview" element={<Home />} />
-              <Route path="products" element={<Home />} />
-              <Route path="patchnote" element={<Home />} />
-              <Route path="*" element={<Home to="/home" />} />
-            </Route>
-            <Route path="/tft" element={<TFT />} />
-            <Route path="/clash" element={<Clash />} />
-            <Route path="/user" element={<Clash />} />
-            <Route path="/inventory" element={<Clash />} />
-            <Route path="/forge" element={<Clash />} />
-            <Route path="/shop" element={<Clash />} />
+        <Routes>
+          <Route path="/" element={<Navigate to="/home/currentEvent" />} />
+          <Route path="/home" element={<Navigate to="/home/currentEvent" />} />
+          <Route path="/home" element={<Home />}>
+            <Route path="currentEvent" element={<Home />} />
+            <Route path="preview" element={<Home />} />
+            <Route path="products" element={<Home />} />
+            <Route path="patchnote" element={<Home />} />
             <Route path="*" element={<Home to="/home" />} />
-          </Routes>{" "}
-        </HashRouter>
-
+          </Route>
+          <Route path="/tft" element={<TFT />} />
+          <Route path="/clash" element={<Clash />} />
+          <Route path="/user" element={<Clash />} />
+          <Route path="/inventory" element={<Clash />} />
+          <Route path="/forge" element={<Clash />} />
+          <Route path="/shop" element={<Clash />} />
+          <Route path="*" element={<Home to="/home" />} />
+        </Routes>
         <Socials />
       </div>
 
