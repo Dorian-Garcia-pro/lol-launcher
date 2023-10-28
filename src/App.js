@@ -21,6 +21,7 @@ function App() {
             <Route path="preview" element={<Home />} />
             <Route path="products" element={<Home />} />
             <Route path="patchnote" element={<Home />} />
+            <Route path="*" element={<Home to="/home" />} />
           </Route>
           <Route path="/tft" element={<TFT />} />
           <Route path="/clash" element={<Clash />} />
