@@ -306,10 +306,11 @@
         letter-spacing: none;
         line-height: 1ch;
         font-weight: bold;
-        font-size: 1rem;
+        /*         font-size: 1rem;
+ */
         text-align: center;
         border-radius: 20vw;
-        padding: $padding $padding;
+        padding: calc($padding + 1px) $padding;
         border: 2px solid $golden;
         border-image-slice: 0;
       }

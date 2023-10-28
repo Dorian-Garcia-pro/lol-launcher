@@ -380,10 +380,11 @@ table {
   letter-spacing: none;
   line-height: 1ch;
   font-weight: bold;
-  font-size: 1rem;
+  /*         font-size: 1rem;
+  */
   text-align: center;
   border-radius: 20vw;
-  padding: 4px 4px;
+  padding: 5px 4px;
   border: 2px solid #998446;
   border-image-slice: 0;
 }
