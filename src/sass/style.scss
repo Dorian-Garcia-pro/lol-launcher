@@ -1,6 +1,7 @@
 /* sass --watch src/sass/style.scss src/sass/style.css */
 
 @import "libs/_variables.scss";
+@import "libs/reset.scss";
 
 %flexCenterXY {
   display: flex;
@@ -46,7 +47,6 @@
   transform: translate($x, $y);
 }
 
-@import "libs/reset.scss";
 @import "mainNav.scss";
 @import "socials.scss";
 @import "home.scss";
@@ -72,7 +72,7 @@ body {
   justify-content: flex-end;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1015px) or (max-height: 460px) {
   .App {
     background-color: black;
     & > * {

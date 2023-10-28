@@ -343,19 +343,21 @@
   align-items: center;
   flex-grow: 1;
   justify-content: center;
-  gap: 1rem;
+  gap: clamp(0px, 0.5vmax, 2vw);
+  flex-wrap: wrap;
   & > div {
     display: flex;
     height: 100%;
     align-items: center;
-    padding: 0.5rem;
+    padding: clamp(0px, 0.5rem, 2vw);
 
     @extend %hoverEffectBlue;
   }
   & > div > a {
     display: flex;
     align-items: center;
-    font-size: 0.8rem;
+    font-size: 1vmax;
+    /* font-size: 0.8rem; */
     font-weight: bold;
     & > p {
       color: whitesmoke;

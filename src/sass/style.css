@@ -1,33 +1,4 @@
 /* sass --watch src/sass/style.scss src/sass/style.css */
-#navPPlevels, #navPP, #rightProfilInvLootShop li, #rightProfilInvLootShopCurrencies,
-#rightProfilInvLootShop, #homeTftClash li, #maintenanceLogo, #playLogoL, #playLogo div, #leftNavPlayHome {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#homeCurrentEventContainer, #homeProductsContainer, #homePatchnoteContainer, #homePreviewContainer, #homeContainer, #socialsContainer, #mainNavContainer * {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
-
-#homeCurrentEventFooterLinks > div, #homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] header > .toggleSpoilers,
-#homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] footer {
-  transition: all 0.2s ease-in-out;
-}
-#homeCurrentEventFooterLinks > div:hover, #homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] header > .toggleSpoilers:hover,
-#homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] footer:hover {
-  background-color: #0000ff;
-}
-#homeCurrentEventFooterLinks > div:hover > a > img, #homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] header > .toggleSpoilers:hover > a > img,
-#homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] footer:hover > a > img {
-  filter: saturate(0) brightness(999);
-}
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -162,6 +133,35 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+#navPPlevels, #navPP, #rightProfilInvLootShop li, #rightProfilInvLootShopCurrencies,
+#rightProfilInvLootShop, #homeTftClash li, #maintenanceLogo, #playLogoL, #playLogo div, #leftNavPlayHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#homeCurrentEventContainer, #homeProductsContainer, #homePatchnoteContainer, #homePreviewContainer, #homeContainer, #socialsContainer, #mainNavContainer * {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+#homeCurrentEventFooterLinks > div, #homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] header > .toggleSpoilers,
+#homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] footer {
+  transition: all 0.2s ease-in-out;
+}
+#homeCurrentEventFooterLinks > div:hover, #homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] header > .toggleSpoilers:hover,
+#homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] footer:hover {
+  background-color: #0000ff;
+}
+#homeCurrentEventFooterLinks > div:hover > a > img, #homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] header > .toggleSpoilers:hover > a > img,
+#homeCurrentEventGrid .homeCurrentEventGridCell[data-cell=planning] footer:hover > a > img {
+  filter: saturate(0) brightness(999);
 }
 
 #rightProfilInvLootShop li:hover, .mainNavLink.active, #homeTftClash li:hover {
@@ -320,7 +320,7 @@ table {
 }
 #rightProfilInvLootShop li {
   font-size: 2rem;
-  padding: 0 1.2rem;
+  padding: 0 clamp(1vw, 1vw, 24px);
   height: 100%;
   cursor: pointer;
 }
@@ -346,16 +346,46 @@ table {
 }
 
 .navCurrencies {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 0 2vw 0 1vw;
+  gap: 0.8rem;
+  padding: 0 2vw;
 }
 .navCurrencies div {
   display: flex;
   flex-direction: row;
   gap: 0.3vw;
   align-items: center;
+}
+.navCurrencies div[data-type=rp] {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1vw;
+}
+.navCurrencies div[data-type=rp]::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0 0 0 -12px;
+  margin: auto;
+  width: calc(100% + 21.6px);
+  height: calc(100% + 12px);
+  border: 1px solid rgba(128, 128, 128, 0.5);
+  border-radius: 50vw;
+}
+.navCurrencies div[data-type=rp] button {
+  letter-spacing: none;
+  line-height: 1ch;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 20vw;
+  padding: 4px 4px;
+  border: 2px solid #998446;
+  border-image-slice: 0;
 }
 
 #navCurrenciesIcons {
@@ -390,6 +420,14 @@ table {
   gap: 1rem;
   /*  padding-right: 7rem;  */
   padding-left: 0.5rem;
+}
+
+#navCloche {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  filter: brightness(150%);
+  cursor: no-drop;
 }
 
 #navPPlevelsContainer {
@@ -502,28 +540,17 @@ table {
   cursor: pointer;
 }
 
+#socialsCol {
+  z-index: 2;
+}
+
 #socialsContainer {
-  width: 17vw;
+  min-width: clamp(16em, 17vw, 17vw);
   position: relative;
-  min-height: calc(89vh - 2.5rem - 5px);
-  max-height: calc(89vh - 2.5rem - 5px);
-  height: 100%;
-  overflow-y: auto;
-}
-#socialsContainer::-webkit-scrollbar {
-  width: 0.5rem;
-}
-#socialsContainer::-webkit-scrollbar-track {
-  background: transparent;
-}
-#socialsContainer::-webkit-scrollbar-thumb {
-  background-color: #353535;
-  opacity: 0.5;
-  border-radius: 1rem;
-}
-#socialsContainer::-webkit-scrollbar-thumb:hover {
-  background-color: #cdbe91;
-  opacity: 1;
+  height: calc(100vh - 11vh);
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
 }
 
 #headerSocials {
@@ -531,8 +558,7 @@ table {
   align-items: center;
   justify-content: space-between;
   align-items: center;
-  padding: 4px;
-  margin-bottom: 1rem;
+  padding: 8px;
 }
 #headerSocials p {
   padding-left: 0.5rem;
@@ -544,11 +570,11 @@ table {
 
 #headerSocialsIcons {
   display: flex;
-  gap: 0.5vw;
+  gap: clamp(8px, 0.5vw, 1.3vw);
   padding: 0 4px 0 0;
 }
 #headerSocialsIcons img {
-  width: 1.5vw;
+  width: clamp(1.3rem, 1.2vw, 1.3vw);
   cursor: pointer;
 }
 #headerSocialsIcons img:hover {
@@ -560,7 +586,6 @@ table {
   justify-content: space-between;
   align-items: center;
   padding: 8px 8px;
-  margin-bottom: 1rem;
   font-weight: bold;
   color: #998446;
   cursor: pointer;
@@ -604,7 +629,23 @@ table {
 }
 
 #categoriesSocialWrapper {
-  overflow: hidden;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+#categoriesSocialWrapper::-webkit-scrollbar {
+  width: 0.5rem;
+}
+#categoriesSocialWrapper::-webkit-scrollbar-track {
+  background: transparent;
+}
+#categoriesSocialWrapper::-webkit-scrollbar-thumb {
+  background-color: #353535;
+  opacity: 0.5;
+  border-radius: 1rem;
+}
+#categoriesSocialWrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #cdbe91;
+  opacity: 1;
 }
 
 .listFriendsCard {
@@ -1435,18 +1476,20 @@ table {
   align-items: center;
   flex-grow: 1;
   justify-content: center;
-  gap: 1rem;
+  gap: clamp(0px, 0.5vmax, 2vw);
+  flex-wrap: wrap;
 }
 #homeCurrentEventFooterLinks > div {
   display: flex;
   height: 100%;
   align-items: center;
-  padding: 0.5rem;
+  padding: clamp(0px, 0.5rem, 2vw);
 }
 #homeCurrentEventFooterLinks > div > a {
   display: flex;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 1vmax;
+  /* font-size: 0.8rem; */
   font-weight: bold;
 }
 #homeCurrentEventFooterLinks > div > a > p {
@@ -1469,7 +1512,7 @@ body {
   justify-content: flex-end;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1015px) or (max-height: 460px) {
   .App {
     background-color: black;
   }

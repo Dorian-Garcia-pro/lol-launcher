@@ -31,10 +31,7 @@ function App() {
           <Route path="/shop" element={<Clash />} />
           <Route path="*" element={<Home to="/home" />} />
         </Routes>
-        <div id="socialsCol">
-          <Socials />
-          <SocialsFooter />
-        </div>
+        <Socials />
       </div>
 
       <div id="mobileMode">

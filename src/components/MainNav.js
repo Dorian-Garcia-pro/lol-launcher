@@ -11,6 +11,7 @@ import cog from "../assets/cog.png";
 import close from "../assets/close.png";
 import rp from "../assets/rp.webp";
 import be from "../assets/be.webp";
+import cloche from "../assets/cloche.png";
 
 const MainNav = () => {
   const [statusPLayer, setStatusPLayer] = useState(true);
@@ -73,11 +74,14 @@ const MainNav = () => {
         <div id="NavSpacerCurrencies"></div>
         <div id="NavCurrencies">
           <div className="navCurrencies">
-            <div className="navCurrency">
-              <img src={rp} className="rpIcon" alt="RPicon"></img>
-              <p className="navValueCurrency">1991</p>
+            <div className="navCurrency" data-type="rp">
+              <div>
+                <img src={rp} className="rpIcon" alt="RPicon"></img>
+                <p className="navValueCurrency">1991</p>
+              </div>
+              <button className="button">+</button>
             </div>
-            <div className="navCurrency">
+            <div className="navCurrency" data-type="be">
               <img src={be} className="beIcon" alt="beIcon"></img>
               <p className="navValueCurrency">32.1K</p>
             </div>
@@ -121,6 +125,7 @@ const MainNav = () => {
             <img src={close} alt="cogwheel" />
           </div>
         </div>
+        <img id="navCloche" src={cloche} alt="cloche" />
       </div>
     </div>
   );

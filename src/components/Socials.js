@@ -6,6 +6,7 @@ import loupe from "../assets/loupe.png";
 import addFolder from "../assets/addFolder.png";
 import addUser from "../assets/addUser.png";
 import triangle from "../assets/triangle.png";
+import SocialsFooter from "./SocialsFooter";
 
 const Socials = () => {
   const friends = [
@@ -315,6 +316,7 @@ const Socials = () => {
           </div>
         </div>
       </div>
+      <SocialsFooter />
     </div>
   );
 };

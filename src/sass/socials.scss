@@ -1,26 +1,15 @@
+#socialsCol {
+  z-index: 2;
+}
+
 #socialsContainer {
   @extend %noselect;
-  width: 17vw;
+  min-width: clamp(16em, 17vw, 17vw);
   position: relative;
-  min-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px);
-  max-height: calc(100vh - $heightNav - $heightSocialsFooter - 5px);
-  height: 100%;
-  overflow-y: auto;
-  &::-webkit-scrollbar {
-    width: 0.5rem;
-  }
-  &::-webkit-scrollbar-track {
-    background: transparent;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #353535;
-    opacity: 0.5;
-    border-radius: 1rem;
-    &:hover {
-      background-color: #cdbe91;
-      opacity: 1;
-    }
-  }
+  height: calc(100vh - #{$heightNav});
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
 }
 
 #headerSocials {
@@ -28,8 +17,7 @@
   align-items: center;
   justify-content: space-between;
   align-items: center;
-  padding: 4px;
-  margin-bottom: 1rem;
+  padding: 8px;
   & p {
     padding-left: 0.5rem;
     font-size: 0.9rem;
@@ -41,10 +29,10 @@
 
 #headerSocialsIcons {
   display: flex;
-  gap: 0.5vw;
+  gap: clamp(8px, 0.5vw, 1.3vw);
   padding: 0 4px 0 0;
   & img {
-    width: 1.5vw;
+    width: clamp(1.3rem, 1.2vw, 1.3vw);
     cursor: pointer;
     &:hover {
       filter: brightness(150%);
@@ -57,7 +45,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px 8px;
-  margin-bottom: 1rem;
   font-weight: bold;
   color: $golden;
   cursor: pointer;
@@ -103,7 +90,23 @@
 }
 
 #categoriesSocialWrapper {
-  overflow: hidden;
+  overflow-y: auto;
+  flex-grow: 1;
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #353535;
+    opacity: 0.5;
+    border-radius: 1rem;
+    &:hover {
+      background-color: #cdbe91;
+      opacity: 1;
+    }
+  }
 }
 
 .listFriendsCard {
