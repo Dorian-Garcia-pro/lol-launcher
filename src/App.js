@@ -4,8 +4,8 @@ import Socials from "./components/Socials";
 import MainNav from "./components/MainNav";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
-import TFT from "./pages/TFT";
-import Clash from "./pages/Clash";
+/* import TFT from "./pages/TFT";
+ */ import Clash from "./pages/Clash";
 /* import SubNavHome from "./components/SubNavHome"; */
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
             <Route path="patchnote" element={<Home />} />
             <Route path="*" element={<Home to="/home" />} />
           </Route>
-          <Route path="/tft" element={<TFT />} />
+          <Route path="/tft" element={<Clash />} />
           <Route path="/clash" element={<Clash />} />
           <Route path="/user" element={<Clash />} />
           <Route path="/inventory" element={<Clash />} />
