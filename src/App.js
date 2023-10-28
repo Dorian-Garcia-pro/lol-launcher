@@ -1,7 +1,6 @@
 import "./App.css";
 import "../src/sass/style.css";
 import Socials from "./components/Socials";
-import SocialsFooter from "./components/SocialsFooter";
 import MainNav from "./components/MainNav";
 import { Route, Routes, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
